@@ -1,9 +1,13 @@
 import React from "react";
+import Project from "./Project";
+import catchlightHome from "../images/catchlight_home.png";
+
+const catchlightPhotos = [catchlightHome];
 
 export default function ProjectCarousel() {
   return (
-    <div className="bg-red-200 flex justify-center items-center h-[80vh]">
-      <div className="bg-black h-[90%] w-[90%]"></div>
+    <div className="bg-red-200 flex flex-col justify-center items-center h-[80vh]">
+      <Project photos={catchlightPhotos}> Catchlight </Project>
     </div>
   );
 }

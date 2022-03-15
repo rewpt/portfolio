@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const svgVariants = {
-  hidden: { rotate: -180 },
-  visible: { rotate: 0, transition: { duration: 1 } },
+  hidden: { rotate: -180, y: "100vh" },
+  visible: { rotate: 0, y: 0, x: 0, transition: { duration: 2 } },
 };
 
 const pathVariants = {
@@ -18,34 +18,42 @@ const pathVariants = {
 export default function logo() {
   return (
     <motion.svg
+      className="mx-[20px]"
       variants={svgVariants}
       initial="hidden"
       animate="visible"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px"
-      y="0px"
-      height="80"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="100px"
+      height="100px"
       viewBox="0 0 170.53 215.36"
-      style="enable-background:new 0 0 170.53 215.36;"
-      xml:space="preserve"
     >
-      <style type="text/css">
-	.st0{fill:#F47D48;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-	.st1{fill:#74787A;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-</style>
       <g>
-        <path
+        <motion.path
           class="st0"
+          variants={pathVariants}
+          initial="hidden"
+          animate="visible"
+          fill="#F47D48"
+          stroke="#000000"
+          stroke-width="3"
+          stroke-miterlimit="10"
           d="M49.58,195.12v19.24h23.09v-19.24H49.58z M140.11,39c-4.17,5.49-8.43,11-12.77,16.54
 		c12.74,4.75,19.15,14.24,19.15,30.76c0,25.83-15.14,37.33-46.88,37.33H72.67V51.59h11.59c4.28-6.14,8.62-12.38,13.04-18.73H49.58
 		V167.9c6.82,0.07,15.51,0.12,23.09,0.14v-25.68h29.85c16.31,0,30.53-3.02,41.62-9.22c2.02-1.12,3.93-2.36,5.74-3.7
 		c12.42-9.22,19.65-23.49,19.65-43.14C169.53,61.12,158.52,46.4,140.11,39z"
         />
-        <path
+        <motion.path
           class="st1"
+          variants={pathVariants}
+          initial="hidden"
+          animate="visible"
+          fill="#74787A"
+          stroke="#000000"
+          stroke-width="3"
+          stroke-miterlimit="10"
           d="M151.48,138.06l-0.67-0.16c-0.11,0.26-0.23,0.53-0.35,0.79c-4.91,11.31-10.84,21.74-16.52,27.41
 		c-7.75,8.58-16.04,9.96-52.27,9.96h-1l-8.02-0.02c-12.18-0.06-23.38-0.25-31.07-0.55c-2.01-0.08-3.77-0.16-5.26-0.26
 		c1.76-2.57,3.51-5.13,5.26-7.69v-41.29c-13.47,19.03-26.93,37.86-40.39,56.45l2.49,4.42h143.81c2.76-11.89,9.4-37.89,11.34-47.29
