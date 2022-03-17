@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import ghLogo from "../images/ghLogo.png";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const svgVariants = {
@@ -16,6 +17,8 @@ const svgVariants = {
 };
 
 function Nav() {
+  const [navOpen, setNavOpen] = useState(true);
+  const chevronClass = "hover:cursor-pointer hover:text-orange mt-[20px]";
   return (
     <div className="sticky top-0 overflow-visible ml-[20px] bg-opacity-0">
       <div className="absolute flex flex-col pt-[50px] w-[90px]">
@@ -28,20 +31,39 @@ function Nav() {
         >
           <ul className="flex flex-col ml-[10px]">
             <div className="flex flex-col text-xl">
-              <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+              {navOpen && (
+                <>
+                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                    <FontAwesomeIcon
+                      className=" h-[60px] w-[60px]"
+                      icon={faGithub}
+                    />
+                  </li>
+                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                    <FontAwesomeIcon
+                      className=" h-[60px] w-[60px]"
+                      icon={faEnvelope}
+                    />
+                  </li>
+                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                    <FontAwesomeIcon
+                      className=" h-[60px] w-[60px]"
+                      icon={faFile}
+                    />
+                  </li>
+                </>
+              )}
+              <li
+                className="hover:cursor-pointer hover:text-orange mt-[20px]"
+                onClick={() => {
+                  setNavOpen(!navOpen);
+                  console.log(navOpen);
+                }}
+              >
                 <FontAwesomeIcon
-                  className=" h-[80px] w-[80px]"
-                  icon={faGithub}
+                  className=" h-[60px] w-[60px]"
+                  icon={faAngleUp}
                 />
-              </li>
-              <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
-                <FontAwesomeIcon
-                  className=" h-[80px] w-[80px]"
-                  icon={faEnvelope}
-                />
-              </li>
-              <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
-                <FontAwesomeIcon className=" h-[80px] w-[80px]" icon={faFile} />
               </li>
             </div>
           </ul>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Project from "./Project";
 import catchlightHome from "../images/catchlight_home.png";
-import jungleHome from "../images/jungle_home.png";
+import jungleHome from "../images/jungle-home.png";
+import quizzAppHome from "../images/quizapp-home.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -13,14 +14,23 @@ const allProjects = [
     and see what they are watching. Start individual chats about 
     movies you share interest in and rate movies to share with all users.`,
     photos: [catchlightHome],
-    stack: ["React", "Tailwind"],
+    stack: ["React", "Tailwind", "Express", "pSQL"],
   },
   {
     name: "Jungle",
-    description: `A ruby on rails based product purchasing app. Find items
-    to purchase and checkout with a credit card using stripe. Includes
-    restricted routes for site administration`,
+    description: `A ruby on rails product purchasing platform. Browse
+    available items, add them to your cart and checkout using Stripe. Includes
+    admin restricted moderation features.`,
     photos: [jungleHome],
+    stack: ["Ruby on Rails", "Stripe"],
+  },
+  {
+    name: "Quiz-App",
+    description: `An all in one quiz site allowing you to create and take quizzes.
+    Take public quizzes made by all users of the site or create private quizzes
+    to study by yourself.  
+    `,
+    photos: [quizzAppHome],
     stack: ["Ruby on Rails", "Stripe"],
   },
 ];
@@ -36,7 +46,7 @@ export default function ProjectCarousel() {
   };
   return (
     <>
-      <div className="bg-slate-300 flex flex-col justify-center items-center min-h-[1000px] ">
+      <div className="bg-slate-300 flex flex-col justify-center items-center min-h-[1100px] ">
         <div className="flex h-[900px] w-[900px] justify-center items-center">
           <FontAwesomeIcon
             className="h-[80px] w-[80px] mr-[50px] hover:cursor-pointer text-[#F47D48]"

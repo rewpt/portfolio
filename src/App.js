@@ -15,11 +15,11 @@ function App() {
       </div>
       <div className="flex justify-center w-full bg-slate-300">
       <div className="w-[90%]">
-      <ProjectCarousel path="/projects" />
+      <ProjectCarousel />
       </div>
       </div>
       <div className="flex justify-center w-full bg-slate-200">
-      <div className="w-[90%]">
+      <div className="w-[90%] flex justify-center">
       <Contact />
       </div>
       </div>

@@ -7,7 +7,7 @@ export default function Project(props) {
       <h1 className="text-5xl mb-[50px]">{props.children}</h1>
       <h2 className="mb-[50px] text-2xl"> {description}</h2>
 
-      <div className="flex drop-shadow-lg border-2 border-black justify-center bg-black h-[600px] w-max-none overflow-hidden">
+      <div className="flex drop-shadow-lg border-2 border-black justify-center bg-black h-[650px] w-[1100px] w-max-none overflow-hidden">
         <img src={photos[0]} alt="" />
       </div>
       <h2 className="mt-[20px] text-xl flex">

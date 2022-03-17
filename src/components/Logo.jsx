@@ -15,10 +15,11 @@ const pathVariants = {
   },
 };
 
-export default function logo() {
+export default function logo(props) {
+  const { navOpen, setNavOpen } = props;
   return (
     <motion.svg
-      className="hover:cursor-pointer"
+      className="hover:cursor-pointer ml-[15px]"
       variants={svgVariants}
       initial="hidden"
       animate="visible"
@@ -26,8 +27,8 @@ export default function logo() {
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="100px"
-      height="100px"
+      width="70px"
+      height="70px"
       viewBox="0 0 170.53 215.36"
     >
       <g>
