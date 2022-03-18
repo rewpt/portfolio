@@ -77,7 +77,6 @@ function Nav() {
               className={chevronClass}
               onClick={() => {
                 setNavOpen(!navOpen);
-                console.log(navOpen);
               }}
             >
               <FontAwesomeIcon

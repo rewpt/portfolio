@@ -27,6 +27,10 @@ export default function Contact() {
         .then(
           (result) => {
             console.log(result.text);
+            resetFirstName();
+            resetLastName();
+            resetEmail();
+            resetInquiry();
           },
           (error) => {
             console.log(error.text);
@@ -48,10 +52,6 @@ export default function Contact() {
         onSubmit={(e) => {
           e.preventDefault();
           submit();
-          resetFirstName();
-          resetLastName();
-          resetEmail();
-          resetInquiry();
         }}
         className="col-span-12  flex flex-col w-full"
       >
@@ -60,8 +60,9 @@ export default function Contact() {
           <input
             onChange={handleFirstName}
             value={firstName}
+            autoComplete="off"
             name="firstName"
-            className="mx-4 border-b-[2px] focus:outline-none border-b-black flex-grow"
+            className="mx-4 border-b-[2px] focus:outline-none border-b-black focus:border-b-[3px] flex-grow"
             type="name"
           />
         </div>
@@ -70,18 +71,20 @@ export default function Contact() {
           <input
             value={lastName}
             onChange={handleLastName}
+            autoComplete="off"
             name="lastName"
-            className="mx-4 flex-grow border-b-[2px] focus:outline-none border-b-black"
+            className="mx-4 flex-grow border-b-[2px] focus:border-b-[3px] focus:outline-none border-b-black"
             type="name"
           />
         </div>
-        <div className="col-start-3 p-2 col-end-11 text-2xl flex border-l-[8px] border-t-orange border-l-[orange] form-card w-full bg-white drop-shadow-xl">
+        <div className="col-start-3 p-2 col-end-11 text-2xl flex border-l-[8px] focus:border-b-[3px] border-t-orange border-l-[orange] form-card w-full bg-white drop-shadow-xl">
           <label className="">Email:</label>
           <input
             value={email}
             onChange={handleEmail}
+            autoComplete="off"
             name="email"
-            className="flex-grow mx-4 h-full w-full border-b-[2px] focus:outline-none border-b-black"
+            className="flex-grow mx-4 h-full w-full border-b-[2px] focus:border-b-[3px] focus:outline-none border-b-black"
             type="text"
           />
         </div>
@@ -90,8 +93,9 @@ export default function Contact() {
           <textarea
             value={inquiry}
             onChange={handleInquiry}
+            autoComplete="off"
             name="inquiry"
-            className="h-full w-full border-[2px] mb-2 focus:outline-none border-black"
+            className="h-full p-1 w-full border-[2px] focus:border-[3px] mb-2 focus:outline-none border-black"
             type="text"
           />
         </div>
