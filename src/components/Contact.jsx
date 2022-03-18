@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import useForm from "../hooks/useForm";
 import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
