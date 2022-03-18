@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.955abbec.css",
-    "main.js": "/portfolio/static/js/main.46a16dbc.js",
+    "main.js": "/portfolio/static/js/main.b5ad9500.js",
     "static/media/catchlight_home.png": "/portfolio/static/media/catchlight_home.646234dd6ec943e8090c.png",
     "static/media/jungle-home.png": "/portfolio/static/media/jungle-home.d6837a686ff83abb9e42.png",
     "static/media/cutout2.png": "/portfolio/static/media/cutout2.ba5df990d7702e609dda.png",
     "static/media/quizapp-home.png": "/portfolio/static/media/quizapp-home.7178f2458b152589cc88.png",
     "index.html": "/portfolio/index.html",
     "main.955abbec.css.map": "/portfolio/static/css/main.955abbec.css.map",
-    "main.46a16dbc.js.map": "/portfolio/static/js/main.46a16dbc.js.map"
+    "main.b5ad9500.js.map": "/portfolio/static/js/main.b5ad9500.js.map"
   },
   "entrypoints": [
     "static/css/main.955abbec.css",
-    "static/js/main.46a16dbc.js"
+    "static/js/main.b5ad9500.js"
   ]
 }
