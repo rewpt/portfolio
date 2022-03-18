@@ -53,11 +53,11 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="flex"
+        className="flex items-center mb-[50px]"
       >
         <h1
           exit="titleExit"
-          className="text-5xl mb-[50px] hover:cursor-pointer"
+          className="text-5xl hover:cursor-pointer"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
@@ -66,7 +66,7 @@ export default function Project(props) {
         </h1>
         {webLink && (
           <a
-            class="webLink"
+            className="webLink"
             target="_blank"
             href={webLink}
             aria-label="webLink"
@@ -78,7 +78,12 @@ export default function Project(props) {
           </a>
         )}
         {ghLink && (
-          <a class="webLink" target="_blank" href={ghLink} aria-label="webLink">
+          <a
+            className="webLink"
+            target="_blank"
+            href={ghLink}
+            aria-label="webLink"
+          >
             <FontAwesomeIcon
               className=" h-[60px] w-[60px] ml-[15px]  hover:cursor-pointer hover:text-[orange] "
               icon={faGithub}
@@ -92,7 +97,7 @@ export default function Project(props) {
           initial="titleInitial"
           animate="titleAnimate"
           exit="titleExit"
-          className="mb-[50px] max-w-[800px] text-2xl"
+          className="mb-[50px] max-w-[800px] text-2xl italic"
         >
           {" "}
           {description}
@@ -142,9 +147,19 @@ export default function Project(props) {
         <ul className="flex ">
           {stack.map((el, index) => {
             if (index !== stack.length - 1) {
-              return <li className="ml-[8px]"> {el}, </li>;
+              return (
+                <li key={index} className="ml-[8px]">
+                  {" "}
+                  {el},{" "}
+                </li>
+              );
             } else {
-              return <li className="ml-[8px]"> {el} </li>;
+              return (
+                <li key={index} className="ml-[8px]">
+                  {" "}
+                  {el}{" "}
+                </li>
+              );
             }
           })}
         </ul>

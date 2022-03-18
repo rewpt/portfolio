@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Project from "./Project";
 import catchlightHome from "../images/catchlight_home.png";
 import jungleHome from "../images/jungle-home.png";
-import quizzAppHome from "../images/quizapp-home.png";
+import quizAppHome from "../images/quizapp-home.png";
 import { AnimatePresence } from "framer-motion";
 
 const allProjects = [
@@ -22,6 +22,7 @@ const allProjects = [
     available items, add them to your cart and checkout using Stripe. Includes
     admin restricted moderation features.`,
     photos: [jungleHome],
+    ghLink: "https://www.github.com/rewpt/jungle-rails",
     stack: ["Ruby on Rails", "Stripe"],
   },
   {
@@ -30,7 +31,8 @@ const allProjects = [
     Take public quizzes made by all users of the site or create private quizzes
     to study by yourself.  
     `,
-    photos: [quizzAppHome],
+    photos: [quizAppHome],
+    ghLink: "https://www.github.com/rewpt/quiz-app",
     stack: ["Ruby on Rails", "Stripe"],
   },
 ];
@@ -42,19 +44,22 @@ export default function ProjectCarousel() {
 
   return (
     <>
-      <div className="bg-slate-300 flex flex-col justify-center items-center min-h-[1100px] ">
+      <div
+        id="projects"
+        className="bg-slate-300 flex flex-col justify-center items-center min-h-[1100px] "
+      >
         <div className="flex h-[900px] w-[900px] justify-center items-center">
           <AnimatePresence exitBeforeEnter>
             {allProjects.map((project, index) => {
               if (carouselIndex === index)
                 return (
                   <Project
+                    key={index}
                     showDesc={showDesc}
                     setShowDesc={setShowDesc}
                     maxIndex={maxIndex}
                     carouselIndex={carouselIndex}
                     setCarouselIndex={setCarouselIndex}
-                    key={index}
                     {...project}
                   >
                     {project.name}
