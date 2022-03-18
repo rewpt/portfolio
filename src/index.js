@@ -10,8 +10,8 @@ import {
 import ProjectCarousel from './components/ProjectCarousel';
 
 render(
-  <BrowserRouter>
-    <Routes>
+  <BrowserRouter >
+    <Routes basename={process.env.PUBLIC_URL}>
       <Route path="/" element={<App />}>
         <Route path="/projects" element={<ProjectCarousel />}>
         {/* <Route index element={<Home />} />
