@@ -1,9 +1,31 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const svgVariants = {
-  hidden: { rotate: -180, y: "100vh" },
-  visible: { rotate: 0, y: 0, x: 0, transition: { duration: 2 } },
+  hidden: { scale: 1, rotate: -180, x: "45vw", y: "45vh" },
+  visible: {
+    scale: 3,
+    rotate: 0,
+    x: "42vw",
+    y: "30vh",
+    transition: { duration: 2 },
+  },
+  exit: {
+    x: 25,
+  },
+};
+
+const svgVariants2 = {
+  initial: { scale: 3, x: "42vw", y: "30vh" },
+  animate: {
+    scale: 0.9,
+    x: "0vw",
+    y: "0vh",
+    type: "spring",
+    ease: "easeInOut",
+    transition: { duration: 2 },
+  },
 };
 
 const pathVariants = {
@@ -11,60 +33,118 @@ const pathVariants = {
   visible: {
     opacity: 1,
     pathLength: 1,
-    transition: { duration: 2, ease: "easeInOut" },
+    transition: { duration: 3 },
   },
 };
 
-export default function logo(props) {
-  const { navOpen, setNavOpen } = props;
+export default function Logo() {
+  const [initialAnimation, setInitialAnimation] = useState(true);
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setInitialAnimation(!initialAnimation);
+    }, 3000);
+
+    return () => {
+      clearInterval(timeOut);
+    };
+  }, []);
   return (
-    <motion.svg
-      className="hover:cursor-pointer ml-[15px]"
-      variants={svgVariants}
-      initial="hidden"
-      animate="visible"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="70px"
-      height="70px"
-      viewBox="0 0 170.53 215.36"
-    >
-      <g>
-        <motion.path
-          className="st0"
-          variants={pathVariants}
-          initial="hidden"
-          animate="visible"
-          fill="#FFA522"
-          stroke="#000000"
-          strokeWidth="4"
-          strokeMiterlimit="10"
-          d="M49.58,195.12v19.24h23.09v-19.24H49.58z M140.11,39c-4.17,5.49-8.43,11-12.77,16.54
-		c12.74,4.75,19.15,14.24,19.15,30.76c0,25.83-15.14,37.33-46.88,37.33H72.67V51.59h11.59c4.28-6.14,8.62-12.38,13.04-18.73H49.58
-		V167.9c6.82,0.07,15.51,0.12,23.09,0.14v-25.68h29.85c16.31,0,30.53-3.02,41.62-9.22c2.02-1.12,3.93-2.36,5.74-3.7
-		c12.42-9.22,19.65-23.49,19.65-43.14C169.53,61.12,158.52,46.4,140.11,39z"
-        />
-        <motion.path
-          className="st1"
-          variants={pathVariants}
-          initial="hidden"
-          animate="visible"
-          fill="#F47D48"
-          stroke="#000000"
-          strokeWidth="4"
-          strokeMiterlimit="10"
-          d="M151.48,138.06l-0.67-0.16c-0.11,0.26-0.23,0.53-0.35,0.79c-4.91,11.31-10.84,21.74-16.52,27.41
-		c-7.75,8.58-16.04,9.96-52.27,9.96h-1l-8.02-0.02c-12.18-0.06-23.38-0.25-31.07-0.55c-2.01-0.08-3.77-0.16-5.26-0.26
-		c1.76-2.57,3.51-5.13,5.26-7.69v-41.29c-13.47,19.03-26.93,37.86-40.39,56.45l2.49,4.42h143.81c2.76-11.89,9.4-37.89,11.34-47.29
-		L151.48,138.06z M28.02,28.66c5.81-8.57,9.95-10.23,34.57-10.23h54.48c-1.49,2.15-2.98,4.29-4.47,6.43
-		c-3.38,4.87-6.76,9.72-10.13,14.57l-1.16,1.67c-2.05,2.95-4.09,5.89-6.12,8.79c-2.26,3.24-4.52,6.47-6.76,9.7h-0.01
-		c-2.58,3.71-5.17,7.4-7.75,11.09v40.11c11.82-17.06,23.64-33.98,35.51-50.87c7.16-10.18,14.33-20.34,21.54-30.5
-		c4.16-5.87,8.34-11.75,12.53-17.63l-2.21-4.43H36.32c-8.3,0-11.62,0.28-14.66-6.36h-7.19c-0.56,12.17-3.87,36.23-5.26,50.61
-		l8.3,0.28C21.1,41.38,25.25,32.25,28.02,28.66z"
-        />
-      </g>
-    </motion.svg>
+    <>
+      {initialAnimation && (
+        <AnimatePresence>
+          <motion.svg
+            className="ml-[10px]"
+            variants={svgVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            x="61.43px"
+            y="77.08px"
+            viewBox="0 0 61.43 77.08"
+          >
+            <g>
+              <motion.path
+                className="st0"
+                variants={pathVariants}
+                initial="hidden"
+                animate="visible"
+                fill="#FFA522"
+                stroke="#000000"
+                strokeWidth="1"
+                strokeMiterlimit="1"
+                d="M18.21,69.31v6.77h8.13v-6.77H18.21z M50.07,14.37c-1.47,1.93-2.97,3.87-4.49,5.82
+		c4.48,1.67,6.74,5.01,6.74,10.82c0,9.09-5.33,13.14-16.5,13.14h-9.48V18.8h4.08c1.51-2.16,3.03-4.36,4.59-6.59H18.21v47.52
+		c2.4,0.02,5.46,0.04,8.13,0.05v-9.04h10.5c5.74,0,10.74-1.06,14.65-3.24c0.71-0.39,1.38-0.83,2.02-1.3
+		c4.37-3.24,6.91-8.27,6.91-15.18C60.43,22.16,56.55,16.98,50.07,14.37z"
+              />
+              <motion.path
+                className="st1"
+                variants={pathVariants}
+                initial="hidden"
+                animate="visible"
+                fill="#F47D48"
+                stroke="#000000"
+                strokeWidth="1"
+                strokeMiterlimit="1"
+                d="M54.07,49.23l-0.24-0.06c-0.04,0.09-0.08,0.19-0.12,0.28c-1.73,3.98-3.81,7.65-5.81,9.65
+		c-2.73,3.02-5.64,3.51-18.39,3.51h-0.35l-2.82-0.01c-4.29-0.02-8.23-0.09-10.93-0.19c-0.71-0.03-1.33-0.06-1.85-0.09
+		c0.62-0.9,1.24-1.81,1.85-2.71V45.08c-4.74,6.7-9.48,13.32-14.21,19.87l0.88,1.56h50.61c0.97-4.18,3.31-13.33,3.99-16.64
+		L54.07,49.23z M10.63,10.73c2.04-3.02,3.5-3.6,12.17-3.6h19.17c-0.52,0.76-1.05,1.51-1.57,2.26c-1.19,1.71-2.38,3.42-3.56,5.13
+		l-0.41,0.59c-0.72,1.04-1.44,2.07-2.15,3.09c-0.8,1.14-1.59,2.28-2.38,3.41h0c-0.91,1.31-1.82,2.6-2.73,3.9v14.12
+		c4.16-6,8.32-11.96,12.5-17.9c2.52-3.58,5.04-7.16,7.58-10.73c1.46-2.07,2.93-4.13,4.41-6.2l-0.78-1.56H13.55
+		c-2.92,0-4.09,0.1-5.16-2.24H5.86C5.66,5.28,4.5,13.75,4.01,18.81l2.92,0.1C8.19,15.21,9.65,12,10.63,10.73z"
+              />
+            </g>
+          </motion.svg>
+        </AnimatePresence>
+      )}
+      {!initialAnimation && (
+        <motion.svg
+          className="ml-[10px] hover:cursor-pointer"
+          variants={svgVariants2}
+          initial="initial"
+          animate="animate"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          x="61px"
+          y="77px"
+          viewBox="0 0 61.43 77.08"
+        >
+          <g>
+            <path
+              className="st0"
+              fill="#FFA522"
+              stroke="#000000"
+              strokeWidth="1"
+              strokeMiterlimit="1"
+              d="M18.21,69.31v6.77h8.13v-6.77H18.21z M50.07,14.37c-1.47,1.93-2.97,3.87-4.49,5.82
+		c4.48,1.67,6.74,5.01,6.74,10.82c0,9.09-5.33,13.14-16.5,13.14h-9.48V18.8h4.08c1.51-2.16,3.03-4.36,4.59-6.59H18.21v47.52
+		c2.4,0.02,5.46,0.04,8.13,0.05v-9.04h10.5c5.74,0,10.74-1.06,14.65-3.24c0.71-0.39,1.38-0.83,2.02-1.3
+		c4.37-3.24,6.91-8.27,6.91-15.18C60.43,22.16,56.55,16.98,50.07,14.37z"
+            />
+            <path
+              className="st1"
+              fill="#F47D48"
+              stroke="#000000"
+              strokeWidth="1"
+              strokeMiterlimit="1"
+              d="M54.07,49.23l-0.24-0.06c-0.04,0.09-0.08,0.19-0.12,0.28c-1.73,3.98-3.81,7.65-5.81,9.65
+		c-2.73,3.02-5.64,3.51-18.39,3.51h-0.35l-2.82-0.01c-4.29-0.02-8.23-0.09-10.93-0.19c-0.71-0.03-1.33-0.06-1.85-0.09
+		c0.62-0.9,1.24-1.81,1.85-2.71V45.08c-4.74,6.7-9.48,13.32-14.21,19.87l0.88,1.56h50.61c0.97-4.18,3.31-13.33,3.99-16.64
+		L54.07,49.23z M10.63,10.73c2.04-3.02,3.5-3.6,12.17-3.6h19.17c-0.52,0.76-1.05,1.51-1.57,2.26c-1.19,1.71-2.38,3.42-3.56,5.13
+		l-0.41,0.59c-0.72,1.04-1.44,2.07-2.15,3.09c-0.8,1.14-1.59,2.28-2.38,3.41h0c-0.91,1.31-1.82,2.6-2.73,3.9v14.12
+		c4.16-6,8.32-11.96,12.5-17.9c2.52-3.58,5.04-7.16,7.58-10.73c1.46-2.07,2.93-4.13,4.41-6.2l-0.78-1.56H13.55
+		c-2.92,0-4.09,0.1-5.16-2.24H5.86C5.66,5.28,4.5,13.75,4.01,18.81l2.92,0.1C8.19,15.21,9.65,12,10.63,10.73z"
+            />
+          </g>
+        </motion.svg>
+      )}
+    </>
   );
 }

@@ -3,9 +3,7 @@ import Project from "./Project";
 import catchlightHome from "../images/catchlight_home.png";
 import jungleHome from "../images/jungle-home.png";
 import quizzAppHome from "../images/quizapp-home.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { AnimatePresence } from "framer-motion";
 
 const allProjects = [
   {
@@ -15,6 +13,8 @@ const allProjects = [
     movies you share interest in and rate movies to share with all users.`,
     photos: [catchlightHome],
     stack: ["React", "Tailwind", "Express", "pSQL"],
+    webLink: "http://catchlight-media.herokuapp.com",
+    ghLink: "https://www.github.com/rewpt/catchlight",
   },
   {
     name: "Jungle",
@@ -38,43 +38,29 @@ const allProjects = [
 export default function ProjectCarousel() {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const maxIndex = allProjects.length - 1;
-  const decrementCarouselIndex = () => {
-    if (carouselIndex !== 0) setCarouselIndex((prev) => prev - 1);
-  };
-  const incrementCarouselIndex = () => {
-    if (carouselIndex < maxIndex) setCarouselIndex((prev) => prev + 1);
-  };
+
   return (
     <>
       <div className="bg-slate-300 flex flex-col justify-center items-center min-h-[1100px] ">
         <div className="flex h-[900px] w-[900px] justify-center items-center">
-          <FontAwesomeIcon
-            className="h-[80px] w-[80px] mr-[50px] hover:cursor-pointer text-[#F47D48]"
-            icon={faCaretLeft}
-            onClick={decrementCarouselIndex}
-          />
-          {allProjects.map((project, index) => {
-            if (carouselIndex === index)
-              return (
-                <Project
-                  key={index}
-                  description={project.description}
-                  photos={project.photos}
-                  stack={project.stack}
-                >
-                  {project.name}
-                </Project>
-              );
-          })}
-          <span
-            onClick={incrementCarouselIndex}
-            className=" hover:cursor-pointer text-[#F47D48]"
-          >
-            <FontAwesomeIcon
-              className="h-[80px] w-[80px] ml-[50px]"
-              icon={faCaretRight}
-            />
-          </span>
+          <AnimatePresence exitBeforeEnter>
+            {allProjects.map((project, index) => {
+              if (carouselIndex === index)
+                return (
+                  <Project
+                    maxIndex={maxIndex}
+                    carouselIndex={carouselIndex}
+                    setCarouselIndex={setCarouselIndex}
+                    key={index}
+                    description={project.description}
+                    photos={project.photos}
+                    stack={project.stack}
+                  >
+                    {project.name}
+                  </Project>
+                );
+            })}
+          </AnimatePresence>
         </div>
       </div>
     </>
