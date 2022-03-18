@@ -37,6 +37,7 @@ const allProjects = [
 
 export default function ProjectCarousel() {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [showDesc, setShowDesc] = useState(false);
   const maxIndex = allProjects.length - 1;
 
   return (
@@ -48,13 +49,13 @@ export default function ProjectCarousel() {
               if (carouselIndex === index)
                 return (
                   <Project
+                    showDesc={showDesc}
+                    setShowDesc={setShowDesc}
                     maxIndex={maxIndex}
                     carouselIndex={carouselIndex}
                     setCarouselIndex={setCarouselIndex}
                     key={index}
-                    description={project.description}
-                    photos={project.photos}
-                    stack={project.stack}
+                    {...project}
                   >
                     {project.name}
                   </Project>

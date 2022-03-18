@@ -29,8 +29,11 @@ export default function Project(props) {
     carouselIndex,
     setCarouselIndex,
     maxIndex,
+    showDesc,
+    setShowDesc,
+    webLink,
+    ghLink,
   } = props;
-  const [showDesc, setShowDesc] = useState(false);
   const decrementCarouselIndex = () => {
     if (carouselIndex !== 0) setCarouselIndex((prev) => prev - 1);
     else {
@@ -61,14 +64,27 @@ export default function Project(props) {
         >
           {props.children}
         </h1>
-        <FontAwesomeIcon
-          className=" h-[60px] w-[60px] ml-[15px] hover:cursor-pointer hover:text-[orange] "
-          icon={faChrome}
-        />
-        <FontAwesomeIcon
-          className=" h-[60px] w-[60px] ml-[15px]  hover:cursor-pointer hover:text-[orange] "
-          icon={faGithub}
-        />
+        {webLink && (
+          <a
+            class="webLink"
+            target="_blank"
+            href={webLink}
+            aria-label="webLink"
+          >
+            <FontAwesomeIcon
+              className=" h-[60px] w-[60px] ml-[15px] hover:cursor-pointer hover:text-[orange] "
+              icon={faChrome}
+            />
+          </a>
+        )}
+        {ghLink && (
+          <a class="webLink" target="_blank" href={ghLink} aria-label="webLink">
+            <FontAwesomeIcon
+              className=" h-[60px] w-[60px] ml-[15px]  hover:cursor-pointer hover:text-[orange] "
+              icon={faGithub}
+            />
+          </a>
+        )}
       </motion.div>
       {showDesc && (
         <motion.h2
@@ -76,7 +92,7 @@ export default function Project(props) {
           initial="titleInitial"
           animate="titleAnimate"
           exit="titleExit"
-          className="mb-[50px] max-w-[1100px] text-2xl"
+          className="mb-[50px] max-w-[800px] text-2xl"
         >
           {" "}
           {description}
