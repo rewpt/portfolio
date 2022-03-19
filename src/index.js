@@ -10,7 +10,7 @@ import {
 import ProjectCarousel from './components/ProjectCarousel';
 
 render(
-  <BrowserRouter >
+  <BrowserRouter>
     <Routes >
       <Route path="/" element={<App />}>
         <Route path="/projects" element={<ProjectCarousel />}>

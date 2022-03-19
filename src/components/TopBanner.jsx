@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "./Button";
 import face from "../images/cutout2.png";
-import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
 
 const svgVariants = {
@@ -13,7 +12,6 @@ const svgVariants = {
 };
 
 export default function TopBanner() {
-  let navigate = useNavigate();
   return (
     <div
       id="top-banner"
