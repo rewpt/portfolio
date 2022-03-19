@@ -3,14 +3,14 @@ import './index.css';
 import App from './App';
 import { render } from "react-dom";
 import {
-  HashRouter,
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 import ProjectCarousel from './components/ProjectCarousel';
 
 render(
-  <HashRouter >
+  <BrowserRouter >
     <Routes >
       <Route path="/" element={<App />}>
         <Route path="/projects" element={<ProjectCarousel />}>
@@ -23,6 +23,6 @@ render(
       </Route>
       </Route>
     </Routes>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );

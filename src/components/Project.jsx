@@ -73,7 +73,6 @@ export default function Project(props) {
             variants={variants}
             whileHover="icoHover"
             className="webLink"
-            target="_blank"
             href={webLink}
             aria-label="webLink"
           >
@@ -88,7 +87,6 @@ export default function Project(props) {
             variants={variants}
             whileHover="icoHover"
             className="webLink"
-            target="_blank"
             href={ghLink}
             aria-label="webLink"
           >

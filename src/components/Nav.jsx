@@ -8,6 +8,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
+// import openInNewTab from "./helpers/openNewTab";
 
 const svgVariants = {
   hidden: { opacity: 0 },
@@ -52,7 +53,11 @@ function Nav() {
                     />
                   </li>
                 </a>
-                <a target="_blank" href="https://www.github.com/rewpt">
+                <a
+                // onClick={() => {
+                //   openInNewTab("https://www.github.com/rewpt");
+                // }}
+                >
                   <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
                     <FontAwesomeIcon
                       className=" h-[60px] w-[60px]"
@@ -61,8 +66,11 @@ function Nav() {
                   </li>
                 </a>
                 <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1LvfcKpNCgrGiniY0qRUgVfzDgAr626ON/view?usp=sharing"
+                // onClick={() => {
+                //   openInNewTab(
+                //     "https://drive.google.com/file/d/1LvfcKpNCgrGiniY0qRUgVfzDgAr626ON/view?usp=sharing"
+                //   );
+                // }}
                 >
                   <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
                     <FontAwesomeIcon
