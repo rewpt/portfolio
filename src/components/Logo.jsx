@@ -103,20 +103,20 @@ export default function Logo() {
         </AnimatePresence>
       )}
       {!initialAnimation && (
-        <motion.svg
-          className="ml-[10px] hover:cursor-pointer  inline-block"
-          variants={svgVariants2}
-          initial="initial"
-          animate="animate"
-          version="1.1"
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          x="61px"
-          y="77px"
-          viewBox="0 0 61.43 77.08"
-        >
-          <a className="w-[70px] h-[70px]" href="#top-banner">
+        <motion.a href="#top-banner" className="w-full h-full">
+          <motion.svg
+            className="ml-[10px]  inline-block"
+            variants={svgVariants2}
+            initial="initial"
+            animate="animate"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            x="61px"
+            y="77px"
+            viewBox="0 0 61.43 77.08"
+          >
             <g>
               <path
                 className="st0"
@@ -144,8 +144,8 @@ export default function Logo() {
 		c-2.92,0-4.09,0.1-5.16-2.24H5.86C5.66,5.28,4.5,13.75,4.01,18.81l2.92,0.1C8.19,15.21,9.65,12,10.63,10.73z"
               />
             </g>
-          </a>
-        </motion.svg>
+          </motion.svg>
+        </motion.a>
       )}
     </>
   );

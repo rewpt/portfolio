@@ -11,6 +11,7 @@ export default function Button(props) {
     <motion.button
       variants={buttonVariants}
       whileHover="hover"
+      whileTap={{ scale: 1.05, y: 2 }}
       className="rounded py-[10px] px-[20px] bg-[orange] drop-shadow-md hover:drop-shadow-xl"
     >
       {props.children}

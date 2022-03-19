@@ -12,6 +12,8 @@ const variants = {
     opacity: 1,
     transition: { duration: 0.5 },
   },
+  h1Hover: { scale: 1.03 },
+  icoHover: { scale: 1.05 },
   exit: {
     opacity: 0,
     transition: { duration: 0.5 },
@@ -55,7 +57,9 @@ export default function Project(props) {
         exit="titleExit"
         className="flex items-center mb-[50px]"
       >
-        <h1
+        <motion.h1
+          variants={variants}
+          whileHover="h1Hover"
           exit="titleExit"
           className="text-5xl hover:cursor-pointer"
           onClick={() => {
@@ -63,9 +67,11 @@ export default function Project(props) {
           }}
         >
           {props.children}
-        </h1>
+        </motion.h1>
         {webLink && (
-          <a
+          <motion.a
+            variants={variants}
+            whileHover="icoHover"
             className="webLink"
             target="_blank"
             href={webLink}
@@ -75,10 +81,12 @@ export default function Project(props) {
               className=" h-[60px] w-[60px] ml-[15px] hover:cursor-pointer hover:text-[orange] "
               icon={faChrome}
             />
-          </a>
+          </motion.a>
         )}
         {ghLink && (
-          <a
+          <motion.a
+            variants={variants}
+            whileHover="icoHover"
             className="webLink"
             target="_blank"
             href={ghLink}
@@ -88,7 +96,7 @@ export default function Project(props) {
               className=" h-[60px] w-[60px] ml-[15px]  hover:cursor-pointer hover:text-[orange] "
               icon={faGithub}
             />
-          </a>
+          </motion.a>
         )}
       </motion.div>
       {showDesc && (

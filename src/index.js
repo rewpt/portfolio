@@ -11,7 +11,7 @@ import ProjectCarousel from './components/ProjectCarousel';
 
 render(
   <BrowserRouter >
-    <Routes>
+    <Routes >
       <Route path="/" element={<App />}>
         <Route path="/projects" element={<ProjectCarousel />}>
         {/* <Route index element={<Home />} />
