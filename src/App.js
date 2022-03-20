@@ -8,11 +8,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <div className="flex justify-center w-full bg-slate-200">
-      <div className="w-[90%] mx-[100px]">
       <TopBanner />
-      </div>
-      </div>
       <div className="flex justify-center w-full bg-slate-300">
       <div className="w-[90%]">
       <ProjectCarousel />

@@ -113,15 +113,12 @@ export default function Project(props) {
       <div className="flex items-center">
         <span
           onClick={decrementCarouselIndex}
-          className="h-[80px] w-[80px] mr-[50px] hover:scale-[1.2] hover:cursor-pointer text-[#F47D48]"
+          className="h-[80px] w-[80px] mr-[25px] hover:scale-[1.2] hover:cursor-pointer text-[#F47D48]"
         >
-          <FontAwesomeIcon
-            className="h-[80px] w-[80px] mr-[50px]"
-            icon={faCaretLeft}
-          />
+          <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretLeft} />
         </span>
 
-        <div className="flex drop-shadow-lg border-2 border-black justify-center bg-black h-[650px] w-[1100px] w-max-none overflow-hidden">
+        <div className="flex drop-shadow-lg border-2 border-black justify-center bg-black h-[650px] xs:h-[300px] xs:w-[450px] md:w-[600px] lg:w-[800px] xl:w-[900px] 2xl:w-[1100px] overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"

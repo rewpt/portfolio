@@ -25,22 +25,22 @@ function Nav() {
     "hover:cursor-pointer hover:text-orange mt-[20px] rotate-180": !navOpen,
   });
   return (
-    <div className="sticky top-[50px] overflow-visible ml-[30px] bg-opacity-0">
+    <div className="sticky top-[50px] overflow-visible bg-opacity-0 ml-[20px]">
       <div className="absolute flex flex-col items-center w-[85px]">
         <Logo></Logo>
         <motion.nav
-          className="w-[85px]"
+          className=""
           variants={svgVariants}
           initial="hidden"
           animate="visible"
         >
-          <ul className="flex flex-col items-center">
+          <ul className="flex flex-col">
             {navOpen && (
               <>
                 <a href="#projects">
                   <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
                     <FontAwesomeIcon
-                      className=" h-[60px] w-[60px]"
+                      className="h-[60px] w-[60px]"
                       icon={faFolder}
                     />
                   </li>
@@ -48,7 +48,7 @@ function Nav() {
                 <a href="#contact">
                   <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
                     <FontAwesomeIcon
-                      className=" h-[60px] w-[60px]"
+                      className="h-[60px] w-[60px]"
                       icon={faEnvelope}
                     />
                   </li>
@@ -60,7 +60,7 @@ function Nav() {
                 >
                   <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
                     <FontAwesomeIcon
-                      className=" h-[60px] w-[60px]"
+                      className="h-[60px] w-[60px]"
                       icon={faGithub}
                     />
                   </li>
@@ -74,7 +74,7 @@ function Nav() {
                 >
                   <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
                     <FontAwesomeIcon
-                      className=" h-[60px] w-[60px]"
+                      className="h-[60px] w-[60px]"
                       icon={faFile}
                     />
                   </li>
@@ -87,10 +87,7 @@ function Nav() {
                 setNavOpen(!navOpen);
               }}
             >
-              <FontAwesomeIcon
-                className=" h-[60px] w-[60px]"
-                icon={faAngleUp}
-              />
+              <FontAwesomeIcon className="h-[60px] w-[60px]" icon={faAngleUp} />
             </li>
           </ul>
         </motion.nav>

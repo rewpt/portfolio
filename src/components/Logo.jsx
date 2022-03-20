@@ -105,7 +105,7 @@ export default function Logo() {
       {!initialAnimation && (
         <motion.a href="#top-banner" className="w-full h-full">
           <motion.svg
-            className="ml-[10px]  inline-block"
+            className="ml-[10px]"
             variants={svgVariants2}
             initial="initial"
             animate="animate"

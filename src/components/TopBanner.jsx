@@ -15,26 +15,32 @@ export default function TopBanner() {
   return (
     <div
       id="top-banner"
-      className="h-[90vh] flex items-center justify-center text-5xl  bg-slate-200"
+      className="flex justify-center h-[100vh] w-full bg-slate-200"
     >
-      <motion.div
-        className="flex flex-col justify-center items-center"
-        variants={svgVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="flex border-2 border-black overflow-hidden justify-center items-start rounded-full drop-shadow-xl h-[550px] w-[550px] ring-white p-10 bg-gradient-to-l from-[#11998E] to-[#119967] ">
-          <img src={face} className="face h-[525px] max-w-none" alt="profile" />
-        </div>
-        <p className="w-[900px] mb-[50px] mt-10 mx-[100px]">
-          Hi! My name is
-          <span className="text-[orange]"> Zev Permack. </span> I build web apps
-          to help improve the lives of others!
-        </p>
-        <a href="#projects">
-          <Button>Projects</Button>
-        </a>
-      </motion.div>
+      <div className=" flex w-[50%] items-center justify-center text-xl  bg-slate-200">
+        <motion.div
+          className="flex flex-col justify-center items-center"
+          variants={svgVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <div className="flex border-2 border-black overflow-hidden justify-center items-start rounded-full drop-shadow-xl h-[200px] w-[200px] ring ring-white p-10 bg-gradient-to-l from-[#11998E] to-[#119967] ">
+            <img
+              src={face}
+              className="face min-h-[175px] max-h-[175px] max-w-none"
+              alt="profile"
+            />
+          </div>
+          <p className="w-[900px] mb-[50px] mt-10 mx-[100px]">
+            Hi! My name is
+            <span className="text-[orange]"> Zev Permack. </span> I build web
+            apps to help improve the lives of others!
+          </p>
+          <a href="#projects">
+            <Button>Projects</Button>
+          </a>
+        </motion.div>
+      </div>
     </div>
   );
 }
