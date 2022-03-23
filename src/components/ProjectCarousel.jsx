@@ -43,32 +43,34 @@ export default function ProjectCarousel() {
   const maxIndex = allProjects.length - 1;
 
   return (
-    <>
-      <div
-        id="projects"
-        className="bg-slate-300 flex flex-col justify-center items-center min-h-[1100px] "
-      >
-        <div className="flex h-[900px] w-[900px] justify-center items-center">
-          <AnimatePresence exitBeforeEnter>
-            {allProjects.map((project, index) => {
-              if (carouselIndex === index)
-                return (
-                  <Project
-                    key={index}
-                    showDesc={showDesc}
-                    setShowDesc={setShowDesc}
-                    maxIndex={maxIndex}
-                    carouselIndex={carouselIndex}
-                    setCarouselIndex={setCarouselIndex}
-                    {...project}
-                  >
-                    {project.name}
-                  </Project>
-                );
-            })}
-          </AnimatePresence>
+    <div className="flex justify-center w-full bg-slate-300">
+      <div className="w-[90%]">
+        <div
+          id="projects"
+          className="bg-slate-300 flex flex-col justify-center items-center"
+        >
+          <div className="flex justify-center items-center">
+            <AnimatePresence exitBeforeEnter>
+              {allProjects.map((project, index) => {
+                if (carouselIndex === index)
+                  return (
+                    <Project
+                      key={index}
+                      showDesc={showDesc}
+                      setShowDesc={setShowDesc}
+                      maxIndex={maxIndex}
+                      carouselIndex={carouselIndex}
+                      setCarouselIndex={setCarouselIndex}
+                      {...project}
+                    >
+                      {project.name}
+                    </Project>
+                  );
+              })}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

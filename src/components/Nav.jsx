@@ -25,8 +25,8 @@ function Nav() {
     "hover:cursor-pointer hover:text-orange mt-[20px] rotate-180": !navOpen,
   });
   return (
-    <div className="sticky top-[50px] overflow-visible bg-opacity-0 ml-[20px]">
-      <div className="absolute flex flex-col items-center w-[85px]">
+    <footer className="fixed flex max-h-[80px] justify-center place-self-center top-0 bg-white bg-opacity-25">
+      <div className="flex justify-center w-full items-center">
         <Logo></Logo>
         <motion.nav
           className=""
@@ -34,7 +34,7 @@ function Nav() {
           initial="hidden"
           animate="visible"
         >
-          <ul className="flex flex-col">
+          <ul className="flex">
             {navOpen && (
               <>
                 <a href="#projects">
@@ -92,7 +92,7 @@ function Nav() {
           </ul>
         </motion.nav>
       </div>
-    </div>
+    </footer>
   );
 }
 

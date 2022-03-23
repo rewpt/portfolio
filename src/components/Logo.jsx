@@ -19,7 +19,7 @@ const svgVariants = {
 const svgVariants2 = {
   initial: { scale: 3, x: "42vw", y: "30vh" },
   animate: {
-    scale: 0.9,
+    scale: 0.2,
     x: "0vw",
     y: "0vh",
     type: "spring",

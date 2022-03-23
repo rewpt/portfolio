@@ -41,72 +41,70 @@ export default function Contact() {
     }
   };
   return (
-    <div
-      id="contact"
-      className="flex flex-col justify-center w-[750px] bg-slate-200 h-[750px]"
-    >
-      <h2 className="flex justify-center p-2 border-l-[8px] border-t-[10px] border-t-orange border-l-[orange] bg-white w-full text-5xl col-span-12 mb-0 drop-shadow-xl">
-        Contact
-      </h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          submit();
-        }}
-        className="col-span-12  flex flex-col w-full"
-      >
-        <div className="flex p-2 mb-0 text-2xl border-l-[8px] mr-4 border-t-orange border-l-[orange] form-card bg-white w-full drop-shadow-xl">
-          <label className="">First Name:</label>
-          <input
-            onChange={handleFirstName}
-            value={firstName}
-            autoComplete="off"
-            name="firstName"
-            className="mx-4 border-b-[2px] focus:outline-none border-b-black focus:border-b-[3px] flex-grow"
-            type="name"
-          />
-        </div>
-        <div className="flex p-2 mb-0 text-2xl border-l-[8px] mr-4 border-t-orange border-l-[orange] form-card bg-white w-full drop-shadow-xl">
-          <label className="">Last Name:</label>
-          <input
-            value={lastName}
-            onChange={handleLastName}
-            autoComplete="off"
-            name="lastName"
-            className="mx-4 flex-grow border-b-[2px] focus:border-b-[3px] focus:outline-none border-b-black"
-            type="name"
-          />
-        </div>
-        <div className="col-start-3 p-2 col-end-11 text-2xl flex border-l-[8px] focus:border-b-[3px] border-t-orange border-l-[orange] form-card w-full bg-white drop-shadow-xl">
-          <label className="">Email:</label>
-          <input
-            value={email}
-            onChange={handleEmail}
-            autoComplete="off"
-            name="email"
-            className="flex-grow mx-4 h-full w-full border-b-[2px] focus:border-b-[3px] focus:outline-none border-b-black"
-            type="text"
-          />
-        </div>
-        <div className="col-start-3 p-2 col-end-11 text-2xl flex flex-col border-l-[8px] border-t-orange border-l-[orange] form-card w-full mb-[30px] h-[300px] bg-white drop-shadow-xl">
-          <label className="">Inquiry:</label>
-          <textarea
-            value={inquiry}
-            onChange={handleInquiry}
-            autoComplete="off"
-            name="inquiry"
-            className="h-full p-1 w-full border-[2px] focus:border-[3px] mb-2 focus:outline-none border-black"
-            type="text"
-          />
-        </div>
-        <button
-          type="submit"
-          value="Send"
-          className="self-center hover:scale-[1.1] text-2xl mb-[40px] row-start-3 row-end-4 rounded-lg h-[50px] w-full bg-[orange] drop-shadow-xl"
+    <div className="flex justify-center w-full bg-slate-200">
+      <div className="w-[90%] flex justify-center items-center">
+        <div
+          id="contact"
+          className="flex flex-col justify-center w-full bg-slate-200"
         >
-          Submit
-        </button>
-      </form>
+          <h2 className="contact-h2">Contact</h2>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              submit();
+            }}
+            className="col-span-12  flex flex-col w-full"
+          >
+            <div className="form-container">
+              <label className="">First Name:</label>
+              <input
+                onChange={handleFirstName}
+                value={firstName}
+                autoComplete="off"
+                name="firstName"
+                className="form-input"
+                type="name"
+              />
+            </div>
+            <div className="form-container">
+              <label className="">Last Name:</label>
+              <input
+                value={lastName}
+                onChange={handleLastName}
+                autoComplete="off"
+                name="lastName"
+                className="form-input"
+                type="name"
+              />
+            </div>
+            <div className="form-container">
+              <label className="">Email:</label>
+              <input
+                value={email}
+                onChange={handleEmail}
+                autoComplete="off"
+                name="email"
+                className="form-input"
+                type="text"
+              />
+            </div>
+            <div className="inquiry-container">
+              <label className="">Inquiry:</label>
+              <textarea
+                value={inquiry}
+                onChange={handleInquiry}
+                autoComplete="off"
+                name="inquiry"
+                className="form-text"
+                type="text"
+              />
+            </div>
+            <button type="submit" value="Send" className="form-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

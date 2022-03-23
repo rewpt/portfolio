@@ -6,20 +6,11 @@ import TopBanner from './components/TopBanner';
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
+    <div className="App flex flex-col">
       <TopBanner />
-      <div className="flex justify-center w-full bg-slate-300">
-      <div className="w-[90%]">
       <ProjectCarousel />
-      </div>
-      </div>
-      <div className="flex justify-center w-full bg-slate-200">
-      <div className="w-[90%] flex justify-center">
-      <Contact />
-      </div>
-      </div>
-      
+      <Contact />    
+      <Nav />  
     </div>
   );
 }

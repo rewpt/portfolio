@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const buttonVariants = {
   hover: {
     scale: 1.1,
-    boxShadow: "2px 10px 50px rgb(255,255,255)",
   },
 };
 export default function Button(props) {
@@ -12,7 +11,7 @@ export default function Button(props) {
       variants={buttonVariants}
       whileHover="hover"
       whileTap={{ scale: 1.05, y: 2 }}
-      className="rounded py-[10px] px-[20px] bg-[orange] drop-shadow-md hover:drop-shadow-xl"
+      className="rounded text-[1.5rem] py-[.5em] px-[1em] bg-[orange] drop-shadow-md hover:drop-shadow-xl"
     >
       {props.children}
     </motion.button>
