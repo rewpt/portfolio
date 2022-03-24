@@ -61,7 +61,7 @@ export default function Project(props) {
           variants={variants}
           whileHover="h1Hover"
           exit="titleExit"
-          className="text-5xl hover:cursor-pointer"
+          className="text-[4rem] text-zgreen hover:cursor-pointer"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
@@ -77,7 +77,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[60px] w-[60px] ml-[15px] hover:cursor-pointer hover:text-[orange] "
+              className=" h-[60px] w-[60px] ml-[15px] hover:cursor-pointer text-zgreen hover:text-[orange] "
               icon={faChrome}
             />
           </motion.a>
@@ -91,7 +91,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[60px] w-[60px] ml-[15px]  hover:cursor-pointer hover:text-[orange] "
+              className=" h-[60px] w-[60px] ml-[15px] text-zgreen  hover:cursor-pointer hover:text-[orange] "
               icon={faGithub}
             />
           </motion.a>
@@ -141,7 +141,7 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="mt-[20px] text-xl flex"
+        className="mt-[20px] text-xl text-zgreen flex"
       >
         Crafted with:
         <ul className="flex ">

@@ -43,11 +43,11 @@ export default function ProjectCarousel() {
   const maxIndex = allProjects.length - 1;
 
   return (
-    <div className="flex justify-center w-full bg-slate-300">
+    <div className="flex justify-center w-full bg-zburgundy">
       <div className="w-[90%]">
         <div
           id="projects"
-          className="bg-slate-300 flex flex-col justify-center items-center"
+          className="bg-zburgundy flex flex-col justify-center items-center"
         >
           <div className="flex justify-center items-center">
             <AnimatePresence exitBeforeEnter>

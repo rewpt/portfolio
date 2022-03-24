@@ -15,29 +15,29 @@ export default function TopBanner() {
   return (
     <div
       id="top-banner"
-      className="flex justify-center h-[100vh] w-[100vw] bg-slate-200"
+      className="flex flex-col justify-center items-center w-[100vw] bg-gradient-to-r from-zpurple to-zlpurple "
     >
       <motion.div
-        className="flex flex-col w-[80%] justify-center items-center text-xl bg-slate-200"
+        className="flex flex-col-reverse w-[80%] mb-[2rem] mt-[8rem] justify-center items-center opacity-0"
         variants={svgVariants}
         initial="hidden"
         animate="visible"
       >
-        <div className="flex border-2 border-black overflow-hidden justify-center items-start rounded-full drop-shadow-xl h-[80vw] w-[80vw] max-h-[400px] max-w-[400px] p-10 bg-gradient-to-l from-[#11998E] to-[#119967] ">
-          <img
-            src={face}
-            className="face h-[140%] w-[140%] max-h-[375px]  max-w-none"
-            alt="profile"
-          />
-        </div>
-        <p className=" mb-[50px] mt-10 text-[1.5rem]">
-          Hi! My name is
-          <span className="text-[orange]"> Zev Permack. </span> I build web apps
-          to help improve the lives of others!
-        </p>
         <a href="#projects">
           <Button>Projects</Button>
         </a>
+        <p className=" mb-[1em] mt-10 text-zgreen text-[2rem] max-w-[600px]">
+          Hi! My name is
+          <span className="text-zorange font-bold"> Zev Permack. </span> I build
+          web apps to help improve the lives of others!
+        </p>
+        <div className="flex justify-center items-end border-2 border-black overflow-hidden rounded-full drop-shadow-xl w-[80vw] h-[80vw] max-h-[400px] max-w-[400px] bg-gradient-to-l from-zlgreen to-zgreen ">
+          <img
+            src={face}
+            className="face h-[60vw] max-h-[350px]  max-w-none"
+            alt="profile"
+          />
+        </div>
       </motion.div>
     </div>
   );

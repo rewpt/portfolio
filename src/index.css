@@ -19,22 +19,22 @@ body {
     scrollbar-width: none; /* Firefox */
   }
   .form-container {
-    @apply flex flex-col text-[1.2rem] border-l-[.4rem] border-t-orange border-l-[orange] bg-white w-full drop-shadow-xl;
+    @apply flex flex-col text-[1.2rem] border-l-[.4rem] border-t-zorange border-l-zorange bg-white w-full drop-shadow-xl;
   }
   .form-input {
     @apply flex-grow border-b-[2px] focus:border-b-[3px] focus:outline-none border-b-black;
   }
 
   .inquiry-container {
-    @apply text-[1.3rem] flex flex-col border-l-[.4rem] border-l-[orange] w-full mb-[30px] h-[300px] bg-white drop-shadow-xl;
+    @apply text-[1.3rem] flex flex-col border-l-[.4rem] border-l-zorange w-full mb-[30px] h-[300px] bg-white drop-shadow-xl;
   }
   .form-text {
     @apply h-full p-1 w-full border-[2px] focus:border-[3px] mb-2 focus:outline-none border-black;
   }
   .contact-h2 {
-    @apply flex justify-center p-2 border-l-[.4rem] border-t-[10px] border-t-orange border-l-[orange] bg-white w-full text-5xl col-span-12 mb-0 drop-shadow-xl;
+    @apply flex justify-center p-2 border-l-[.4rem] border-t-[10px] border-t-zorange border-l-zorange bg-white w-full text-5xl col-span-12 mb-0 drop-shadow-xl;
   }
   .form-button {
-    @apply self-center hover:scale-[1.1] text-2xl row-start-3 row-end-4 rounded-lg h-[50px] w-full bg-[orange] drop-shadow-xl;
+    @apply self-center hover:scale-[1.1] text-2xl row-start-3 row-end-4 rounded-lg h-[50px] w-full bg-zorange drop-shadow-xl;
   }
 }
