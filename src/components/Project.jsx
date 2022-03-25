@@ -55,13 +55,13 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="flex items-center mb-[50px]"
+        className="flex items-center"
       >
         <motion.h1
           variants={variants}
           whileHover="h1Hover"
           exit="titleExit"
-          className="text-[4rem] text-zgreen hover:cursor-pointer"
+          className="text-[2.2rem] hover:cursor-pointer"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
@@ -77,7 +77,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[60px] w-[60px] ml-[15px] hover:cursor-pointer text-zgreen hover:text-[orange] "
+              className=" h-[3rem] w-[3rem] ml-[15px] hover:cursor-pointer hover:text-zorange "
               icon={faChrome}
             />
           </motion.a>
@@ -91,7 +91,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[60px] w-[60px] ml-[15px] text-zgreen  hover:cursor-pointer hover:text-[orange] "
+              className=" h-[3rem] w-[3rem] ml-[15px] hover:cursor-pointer hover:text-zorange "
               icon={faGithub}
             />
           </motion.a>
@@ -103,7 +103,7 @@ export default function Project(props) {
           initial="titleInitial"
           animate="titleAnimate"
           exit="titleExit"
-          className="mb-[50px] max-w-[800px] text-2xl italic"
+          className=" max-w-[800px] mt-[1rem] text-[1.1rem] italic"
         >
           {" "}
           {description}
@@ -111,14 +111,14 @@ export default function Project(props) {
       )}
 
       <div className="flex items-center">
-        <span
+        {/* <span
           onClick={decrementCarouselIndex}
           className="h-[80px] w-[80px] hover:scale-[1.2] hover:cursor-pointer text-[#F47D48]"
         >
           <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretLeft} />
-        </span>
+        </span> */}
 
-        <div className="flex drop-shadow-lg border-2 border-black justify-center bg-black w-[%100] overflow-hidden">
+        <div className="flex] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black w-[%100] overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"
@@ -129,21 +129,21 @@ export default function Project(props) {
           />
         </div>
 
-        <span
+        {/* <span
           onClick={incrementCarouselIndex}
           className=" hover:cursor-pointer hover:scale-[1.2] text-[#F47D48]"
         >
           <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretRight} />
-        </span>
+        </span> */}
       </div>
       <motion.h2
         variants={variants}
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="mt-[20px] text-xl text-zgreen flex"
+        className="mt-[20px] text-[1rem] flex"
       >
-        Crafted with:
+        <span>Crafted with:</span>
         <ul className="flex ">
           {stack.map((el, index) => {
             if (index !== stack.length - 1) {

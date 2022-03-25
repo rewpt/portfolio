@@ -41,8 +41,8 @@ export default function Contact() {
     }
   };
   return (
-    <div className="flex justify-center w-full bg-slate-200">
-      <div className="w-[90%] flex justify-center items-center">
+    <div className="flex justify-center w-full bg-slate-200 py-[3rem]">
+      <div className="w-[90%] max-w-[800px] flex justify-center items-center">
         <div
           id="contact"
           className="flex flex-col justify-center w-full bg-slate-200"
@@ -53,10 +53,10 @@ export default function Contact() {
               e.preventDefault();
               submit();
             }}
-            className="col-span-12  flex flex-col w-full"
+            className="flex flex-col w-full"
           >
             <div className="form-container">
-              <label className="">First Name:</label>
+              <label className="form-label">First Name:</label>
               <input
                 onChange={handleFirstName}
                 value={firstName}
@@ -67,7 +67,7 @@ export default function Contact() {
               />
             </div>
             <div className="form-container">
-              <label className="">Last Name:</label>
+              <label className="form-label">Last Name:</label>
               <input
                 value={lastName}
                 onChange={handleLastName}
@@ -78,7 +78,7 @@ export default function Contact() {
               />
             </div>
             <div className="form-container">
-              <label className="">Email:</label>
+              <label className="form-label">Email:</label>
               <input
                 value={email}
                 onChange={handleEmail}
@@ -89,7 +89,7 @@ export default function Contact() {
               />
             </div>
             <div className="inquiry-container">
-              <label className="">Inquiry:</label>
+              <label className="form-label">Inquiry:</label>
               <textarea
                 value={inquiry}
                 onChange={handleInquiry}

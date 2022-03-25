@@ -15,10 +15,10 @@ export default function TopBanner() {
   return (
     <div
       id="top-banner"
-      className="flex flex-col justify-center items-center w-[100vw] bg-gradient-to-r from-zpurple to-zlpurple "
+      className="flex flex-col pt-[6rem] pb-[2rem] items-center w-[100vw] bg-gradient-to-r from-zpurple to-zlpurple "
     >
       <motion.div
-        className="flex flex-col-reverse w-[80%] mb-[2rem] mt-[8rem] justify-center items-center opacity-0"
+        className="flex flex-col-reverse w-[80%] mb-[2rem] items-center opacity-0"
         variants={svgVariants}
         initial="hidden"
         animate="visible"
@@ -26,7 +26,7 @@ export default function TopBanner() {
         <a href="#projects">
           <Button>Projects</Button>
         </a>
-        <p className=" mb-[1em] mt-10 text-zgreen text-[2rem] max-w-[600px]">
+        <p className=" mb-[1em] mt-10 text-zgreen text-[1.5rem] max-w-[600px]">
           Hi! My name is
           <span className="text-zorange font-bold"> Zev Permack. </span> I build
           web apps to help improve the lives of others!

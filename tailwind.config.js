@@ -15,6 +15,7 @@ module.exports = {
       colors : {
         zorange: 'rgb(217,141,103)',
         zburgundy: 'rgb(147,73,85)',
+        zlburgundy: 'rgb(158, 81, 93)',
         zpurple: 'rgb(85,57,75)',
         zlpurple: 'rgb(102, 68, 90)',
         zgrey: 'rgb(145,117,110)',
