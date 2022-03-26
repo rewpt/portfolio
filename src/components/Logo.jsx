@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const svgVariants = {
-  hidden: { scale: 1, rotate: -180, x: "45vw", y: "45vh" },
+  hidden: { scale: 0.1, rotate: -180, x: "14vw", y: "15vh" },
   visible: {
-    scale: 3,
+    scale: 2,
     rotate: 0,
-    x: "42vw",
-    y: "30vh",
-    transition: { duration: 2 },
+    x: "14vw",
+    y: "15vh",
+    transition: { duration: 1 },
   },
   exit: {
     x: 25,
@@ -17,9 +17,9 @@ const svgVariants = {
 };
 
 const svgVariants2 = {
-  initial: { scale: 3, x: "42vw", y: "30vh" },
+  initial: { scale: 2, x: "14vw", y: "15vh" },
   animate: {
-    scale: 0.2,
+    scale: 1,
     x: "0vw",
     y: "0vh",
     type: "spring",
@@ -72,7 +72,7 @@ export default function Logo() {
                 variants={pathVariants}
                 initial="hidden"
                 animate="visible"
-                fill="#FFA522"
+                fill="rgb(217,141,103)"
                 stroke="#000000"
                 strokeWidth="1"
                 strokeMiterlimit="1"
@@ -86,7 +86,7 @@ export default function Logo() {
                 variants={pathVariants}
                 initial="hidden"
                 animate="visible"
-                fill="#F47D48"
+                fill="rgb(217,141,103)"
                 stroke="#000000"
                 strokeWidth="1"
                 strokeMiterlimit="1"
@@ -120,7 +120,7 @@ export default function Logo() {
             <g>
               <path
                 className="st0"
-                fill="#FFA522"
+                fill="rgb(217,141,103)"
                 stroke="#000000"
                 strokeWidth="1"
                 strokeMiterlimit="1"
@@ -131,7 +131,7 @@ export default function Logo() {
               />
               <path
                 className="st1"
-                fill="#F47D48"
+                fill="rgb(217,141,103)"
                 stroke="#000000"
                 strokeWidth="1"
                 strokeMiterlimit="1"

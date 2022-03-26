@@ -7,10 +7,10 @@ import TopBanner from './components/TopBanner';
 function App() {
   return (
     <div className="App flex flex-col">
+      <Nav />  
       <TopBanner />
       <ProjectCarousel />
       <Contact />    
-      <Nav />  
     </div>
   );
 }

@@ -25,20 +25,22 @@ function Nav() {
     "hover:cursor-pointer hover:text-orange mt-[20px] rotate-180": !navOpen,
   });
   return (
-    <footer className="fixed flex max-h-[80px] justify-center place-self-center top-0 bg-white bg-opacity-25">
-      <div className="flex justify-center w-full items-center">
-        <Logo></Logo>
+    <header className="flex max-h-[80px] w-full top-0 bg-white bg-opacity-25">
+      <div className="absolute flex justify-between w-full">
+        <motion.div className="logo-container h-[40vw] w-[25vw] max-w-[120px]">
+          <Logo></Logo>
+        </motion.div>
         <motion.nav
           className=""
           variants={svgVariants}
           initial="hidden"
           animate="visible"
         >
-          <ul className="flex">
+          <ul className="flex flex-col">
             {navOpen && (
               <>
                 <a href="#projects">
-                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
                     <FontAwesomeIcon
                       className="h-[60px] w-[60px]"
                       icon={faFolder}
@@ -46,7 +48,7 @@ function Nav() {
                   </li>
                 </a>
                 <a href="#contact">
-                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
                     <FontAwesomeIcon
                       className="h-[60px] w-[60px]"
                       icon={faEnvelope}
@@ -58,7 +60,7 @@ function Nav() {
                     openInNewTab("https://www.github.com/rewpt");
                   }}
                 >
-                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
                     <FontAwesomeIcon
                       className="h-[60px] w-[60px]"
                       icon={faGithub}
@@ -72,7 +74,7 @@ function Nav() {
                     );
                   }}
                 >
-                  <li className="hover:cursor-pointer hover:text-orange mt-[20px]">
+                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
                     <FontAwesomeIcon
                       className="h-[60px] w-[60px]"
                       icon={faFile}
@@ -92,7 +94,7 @@ function Nav() {
           </ul>
         </motion.nav>
       </div>
-    </footer>
+    </header>
   );
 }
 

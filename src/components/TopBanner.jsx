@@ -26,12 +26,12 @@ export default function TopBanner() {
         <a href="#projects">
           <Button>Projects</Button>
         </a>
-        <p className=" mb-[1em] mt-10 text-zgreen text-[1.5rem] max-w-[600px]">
+        <p className=" mb-[1em] mt-10 text-zorange text-[1.5rem] max-w-[600px]">
           Hi! My name is
-          <span className="text-zorange font-bold"> Zev Permack. </span> I build
+          <span className="text-zgreen font-bold"> Zev Permack. </span> I build
           web apps to help improve the lives of others!
         </p>
-        <div className="flex justify-center items-end border-2 border-black overflow-hidden rounded-full drop-shadow-xl w-[80vw] h-[80vw] max-h-[400px] max-w-[400px] bg-gradient-to-l from-zlgreen to-zgreen ">
+        <div className="flex justify-center items-end border-2 border-black overflow-hidden rounded-full drop-shadow-xl w-[80vw] h-[80vw] max-h-[400px] max-w-[400px] bg-gradient-to-r from-zburgundy to-zlburgundy ">
           <img
             src={face}
             className="face h-[60vw] max-h-[350px]  max-w-none"
