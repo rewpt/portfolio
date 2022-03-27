@@ -46,7 +46,7 @@ export default function ProjectCarousel() {
     <div className="flex justify-center w-full py-[3rem] bg-gradient-to-r from-slate-200 to-slate-100">
       <div
         id="projects"
-        className="bg-opacity-0 flex w-2/3 flex-col justify-center items-center"
+        className="bg-opacity-0 flex w-[95%] flex-col justify-center items-center"
       >
         <AnimatePresence exitBeforeEnter>
           {allProjects.map((project, index) => {

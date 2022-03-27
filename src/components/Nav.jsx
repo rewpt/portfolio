@@ -25,8 +25,8 @@ function Nav() {
     "hover:cursor-pointer hover:text-orange mt-[20px] rotate-180": !navOpen,
   });
   return (
-    <header className="flex max-h-[80px] w-full top-0 bg-white bg-opacity-25">
-      <div className="absolute flex justify-between w-full">
+    <header className="flex mx-[1em] max-h-[80px] w-full top-0 bg-white bg-opacity-25">
+      <div className="absolute pt-[1em] flex justify-between w-full">
         <motion.div className="logo-container h-[40vw] w-[25vw] max-w-[120px]">
           <Logo></Logo>
         </motion.div>

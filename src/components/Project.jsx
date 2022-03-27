@@ -118,7 +118,7 @@ export default function Project(props) {
           <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretLeft} />
         </span> */}
 
-        <div className="flex] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black w-[%100] overflow-hidden">
+        <div className="flex mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"
