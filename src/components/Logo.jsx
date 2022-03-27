@@ -53,7 +53,7 @@ export default function Logo() {
       {initialAnimation && (
         <AnimatePresence>
           <motion.svg
-            className="ml-[10px]"
+            className=""
             variants={svgVariants}
             initial="hidden"
             animate="visible"
@@ -105,7 +105,7 @@ export default function Logo() {
       {!initialAnimation && (
         <motion.a href="#top-banner" className="w-full h-full">
           <motion.svg
-            className="ml-[10px]"
+            className=""
             variants={svgVariants2}
             initial="initial"
             animate="animate"

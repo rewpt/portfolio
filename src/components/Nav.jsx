@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavModal from "./NavModal";
 import Logo from "./Logo";
 import classNames from "classnames";
 import { motion } from "framer-motion";
@@ -21,80 +22,39 @@ const svgVariants = {
 function Nav() {
   const [navOpen, setNavOpen] = useState(true);
   const chevronClass = classNames({
-    "hover:cursor-pointer hover:text-orange mt-[20px]": navOpen,
-    "hover:cursor-pointer hover:text-orange mt-[20px] rotate-180": !navOpen,
+    "hover:cursor-pointer text-zorange": navOpen,
+    "hover:cursor-pointer text-zorange rotate-180": !navOpen,
   });
   return (
-    <header className="flex mx-[1em] max-h-[80px] w-full top-0 bg-white bg-opacity-25">
-      <div className="absolute pt-[1em] flex justify-between w-full">
-        <motion.div className="logo-container h-[40vw] w-[25vw] max-w-[120px]">
+    <nav className="flex flex-col px-[1em] w-full top-0 bg-gradient-to-r from-zpurple to-zlpurple">
+      <div className="pt-[1em] flex items-start w-full bg-gradient-to-r from-zpurple to-zlpurple">
+        <motion.div className="logo-container h-[30vw] w-[25vw] max-h-[138px] max-w-[120px]">
           <Logo></Logo>
         </motion.div>
-        <motion.nav
-          className=""
+        <motion.div
+          className={chevronClass}
           variants={svgVariants}
           initial="hidden"
           animate="visible"
+          onClick={() => {
+            setNavOpen(!navOpen);
+          }}
         >
-          <ul className="flex flex-col">
-            {navOpen && (
-              <>
-                <a href="#projects">
-                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
-                    <FontAwesomeIcon
-                      className="h-[60px] w-[60px]"
-                      icon={faFolder}
-                    />
-                  </li>
-                </a>
-                <a href="#contact">
-                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
-                    <FontAwesomeIcon
-                      className="h-[60px] w-[60px]"
-                      icon={faEnvelope}
-                    />
-                  </li>
-                </a>
-                <div
-                  onClick={() => {
-                    openInNewTab("https://www.github.com/rewpt");
-                  }}
-                >
-                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
-                    <FontAwesomeIcon
-                      className="h-[60px] w-[60px]"
-                      icon={faGithub}
-                    />
-                  </li>
-                </div>
-                <div
-                  onClick={() => {
-                    openInNewTab(
-                      "https://drive.google.com/file/d/1LvfcKpNCgrGiniY0qRUgVfzDgAr626ON/view?usp=sharing"
-                    );
-                  }}
-                >
-                  <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
-                    <FontAwesomeIcon
-                      className="h-[60px] w-[60px]"
-                      icon={faFile}
-                    />
-                  </li>
-                </div>
-              </>
-            )}
-            <li
-              className={chevronClass}
-              onClick={() => {
-                setNavOpen(!navOpen);
-              }}
-            >
-              <FontAwesomeIcon className="h-[60px] w-[60px]" icon={faAngleUp} />
-            </li>
-          </ul>
-        </motion.nav>
+          <FontAwesomeIcon
+            className="h-[15vw] w-[15vw] max-h-[60px] max-w-[60px] stroke-2 stroke-black"
+            icon={faAngleUp}
+          />
+        </motion.div>
       </div>
-    </header>
+      <motion.div
+        className=""
+        variants={svgVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <NavModal navOpen={navOpen} setNavOpen={setNavOpen} />
+      </motion.div>
+    </nav>
   );
 }
 
