@@ -47,7 +47,7 @@ function Nav() {
         </motion.div>
       </div>
       <motion.div
-        className=""
+        className="w-full"
         variants={svgVariants}
         initial="hidden"
         animate="visible"
