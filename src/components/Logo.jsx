@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const svgVariants = {
-  hidden: { scale: 0.1, rotate: -180, x: "30vw", y: "15vh" },
+  hidden: { scale: 0.1, rotate: -180, x: "40vw", y: "15vh" },
   visible: {
     scale: 2,
     rotate: 0,
-    x: "30vw",
+    x: "40vw",
     y: "15vh",
     transition: { duration: 1.5 },
   },
@@ -17,7 +17,7 @@ const svgVariants = {
 };
 
 const svgVariants2 = {
-  initial: { scale: 2, x: "30vw", y: "15vh" },
+  initial: { scale: 2, x: "40vw", y: "15vh" },
   animate: {
     scale: 1,
     x: "0vw",
