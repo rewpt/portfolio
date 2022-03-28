@@ -9,16 +9,17 @@ import openInNewTab from "./helpers/openNewTab";
 export default function NavModal(props) {
   const { navOpen, setNavOpen } = props;
   return (
-    <ul className="flex flex-col w-full">
+    <ul className="w-full top-0 z-20 bg-gradient-to-r from-zpurple to-zlpurple flex flex-col">
       {navOpen && (
         <>
           <a href="#projects">
-            <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
+            <li className="hover:cursor-pointer text-zorange opacity-80 mt-[20px]">
               <FontAwesomeIcon className="h-[60px] w-[60px]" icon={faFolder} />
+              <span>Projects</span>
             </li>
           </a>
           <a href="#contact">
-            <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
+            <li className="hover:cursor-pointer text-zorange opacity-80 mt-[20px]">
               <FontAwesomeIcon
                 className="h-[60px] w-[60px]"
                 icon={faEnvelope}
@@ -31,8 +32,9 @@ export default function NavModal(props) {
               openInNewTab("https://www.github.com/rewpt");
             }}
           >
-            <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
+            <li className="hover:cursor-pointer text-zorange opacity-80 mt-[20px]">
               <FontAwesomeIcon className="h-[60px] w-[60px]" icon={faGithub} />
+              <span>Github</span>
             </li>
           </div>
           <div
@@ -42,8 +44,9 @@ export default function NavModal(props) {
               );
             }}
           >
-            <li className="hover:cursor-pointer hover:text-zorange mt-[20px]">
+            <li className="hover:cursor-pointer text-zorange opacity-80 mt-[20px]">
               <FontAwesomeIcon className="h-[60px] w-[60px]" icon={faFile} />
+              <span>Resume</span>
             </li>
           </div>
         </>
