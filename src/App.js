@@ -6,7 +6,7 @@ import TopBanner from './components/TopBanner';
 
 function App() {
   return (
-    <div className="App flex flex-col">
+    <div className="App flex flex-col w-full">
       <Nav />  
       <TopBanner />
       <ProjectCarousel />
