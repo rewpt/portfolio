@@ -111,12 +111,12 @@ export default function Project(props) {
       )}
 
       <div className="flex items-center">
-        {/* <span
+        <span
           onClick={decrementCarouselIndex}
-          className="h-[80px] w-[80px] hover:scale-[1.2] hover:cursor-pointer text-[#F47D48]"
+          className="absolute left-0 z-20 h-[75px] w-[75px] hover:scale-[1.2] hover:cursor-pointer text-[#F47D48]"
         >
           <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretLeft} />
-        </span> */}
+        </span>
 
         <div className="flex mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
@@ -129,12 +129,12 @@ export default function Project(props) {
           />
         </div>
 
-        {/* <span
+        <span
           onClick={incrementCarouselIndex}
-          className=" hover:cursor-pointer hover:scale-[1.2] text-[#F47D48]"
+          className="absolute flex-shrink right-0 z-20 hover:cursor-pointer hover:scale-[1.2] text-[#F47D48]"
         >
-          <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretRight} />
-        </span> */}
+          <FontAwesomeIcon className="h-[75px] w-[75px]" icon={faCaretRight} />
+        </span>
       </div>
       <motion.h2
         variants={variants}
