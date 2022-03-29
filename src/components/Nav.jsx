@@ -15,7 +15,7 @@ const svgVariants = {
 };
 
 function Nav() {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
   const chevronClass = classNames({
     "hover:cursor-pointer text-zorange": navOpen,
     "hover:cursor-pointer text-zorange rotate-180": !navOpen,
