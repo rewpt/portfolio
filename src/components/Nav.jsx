@@ -3,13 +3,8 @@ import NavModal from "./NavModal";
 import Logo from "./Logo";
 import classNames from "classnames";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { faFolder } from "@fortawesome/free-solid-svg-icons";
-import openInNewTab from "./helpers/openNewTab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const svgVariants = {
   hidden: { opacity: 0 },
@@ -52,7 +47,12 @@ function Nav() {
         initial="hidden"
         animate="visible"
       >
-        <NavModal navOpen={navOpen} setNavOpen={setNavOpen} />
+        <NavModal
+          chevronClass={chevronClass}
+          navOpen={navOpen}
+          setNavOpen={setNavOpen}
+          svgVariants={svgVariants}
+        />
       </motion.div>
     </nav>
   );
