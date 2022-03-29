@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCaretLeft, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -113,12 +113,15 @@ export default function Project(props) {
       <div className="flex items-center">
         <span
           onClick={decrementCarouselIndex}
-          className="absolute left-0 z-20 h-[75px] w-[75px] hover:scale-[1.2] hover:cursor-pointer text-[#F47D48]"
+          className="absolute left-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] opacity-50 -rotate-90"
         >
-          <FontAwesomeIcon className="h-[80px] w-[80px]" icon={faCaretLeft} />
+          <FontAwesomeIcon
+            className="h-[10vw] w-[10vw] max-h-[60px] max-w-[60px]"
+            icon={faAngleUp}
+          />
         </span>
 
-        <div className="flex mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
+        <div className="h-[100vw] w-[95vw]flex mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"
@@ -131,9 +134,12 @@ export default function Project(props) {
 
         <span
           onClick={incrementCarouselIndex}
-          className="absolute flex-shrink right-0 z-20 hover:cursor-pointer hover:scale-[1.2] text-[#F47D48]"
+          className="absolute flex-shrink right-1 z-20 hover:cursor-pointer hover:scale-[1.2] text-[#F47D48] opacity-50 rotate-90"
         >
-          <FontAwesomeIcon className="h-[75px] w-[75px]" icon={faCaretRight} />
+          <FontAwesomeIcon
+            className="h-[10vw] w-[10vw] max-h-[60px] max-w-[60px]"
+            icon={faAngleUp}
+          />
         </span>
       </div>
       <motion.h2
