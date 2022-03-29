@@ -40,4 +40,13 @@ body {
   .form-label {
     @apply text-[1.2rem] font-medium;
   }
+  .modal-text {
+    @apply text-[1.6rem] self-center ml-[1em];
+  }
+  .modal-item-container {
+    @apply flex w-full hover:drop-shadow-xl hover:cursor-pointer text-zorange opacity-90 hover:opacity-100 mt-[20px];
+  }
+  .modal-icon {
+    @apply h-[60px] w-[60px];
+  }
 }
