@@ -77,7 +77,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[15px] hover:cursor-pointer hover:text-zorange "
+              className=" h-[3rem] w-[3rem] ml-[.2em] hover:cursor-pointer hover:text-zorange "
               icon={faChrome}
             />
           </motion.a>
@@ -91,7 +91,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[15px] hover:cursor-pointer hover:text-zorange "
+              className=" h-[3rem] w-[3rem] ml-[.2em] hover:cursor-pointer hover:text-zorange "
               icon={faGithub}
             />
           </motion.a>
@@ -103,14 +103,14 @@ export default function Project(props) {
           initial="titleInitial"
           animate="titleAnimate"
           exit="titleExit"
-          className=" max-w-[800px] mt-[1rem] text-[1.1rem] italic"
+          className=" max-w-[800px] mt-[1rem] text-[1.1rem] mx-[1em] italic"
         >
           {" "}
           {description}
         </motion.h2>
       )}
 
-      <div className="flex items-center">
+      <div className="flex relative items-center">
         <span
           onClick={decrementCarouselIndex}
           className="absolute left-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] opacity-50 -rotate-90"
@@ -121,7 +121,7 @@ export default function Project(props) {
           />
         </span>
 
-        <div className="h-[100vw] w-[95vw]flex mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
+        <div className="flex items-center h-[70vw] w-[95vw] max-h-[904px] max-w-[886px] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"
@@ -147,7 +147,7 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="mt-[20px] text-[1rem] flex"
+        className="mt-[20px] mx-[.5em] text-[1rem] flex"
       >
         <span>Crafted with:</span>
         <ul className="flex ">
