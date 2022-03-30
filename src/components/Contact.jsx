@@ -41,11 +41,11 @@ export default function Contact() {
     }
   };
   return (
-    <div className="flex justify-center w-full bg-slate-200 py-[3rem]">
+    <div className="flex justify-center w-full bg-gradient-to-r from-zpurple to-zlpurple py-[3rem]">
       <div className="w-[90%] max-w-[800px] flex justify-center items-center">
         <div
           id="contact"
-          className="flex flex-col justify-center w-full bg-slate-200"
+          className="flex flex-col justify-center w-full bg-opacity-0"
         >
           <h2 className="contact-h2">Contact</h2>
           <form
