@@ -113,10 +113,10 @@ export default function Project(props) {
       <div className="flex relative items-center">
         <span
           onClick={decrementCarouselIndex}
-          className="absolute left-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] opacity-50 -rotate-90"
+          className="absolute bg-white rounded-full flex justify-center items-center left-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 -rotate-90"
         >
           <FontAwesomeIcon
-            className="h-[10vw] w-[10vw] max-h-[60px] max-w-[60px]"
+            className="h-[5vw] w-[5vw] max-h-[60px] max-w-[60px]"
             icon={faAngleUp}
           />
         </span>
@@ -134,10 +134,10 @@ export default function Project(props) {
 
         <span
           onClick={incrementCarouselIndex}
-          className="absolute flex-shrink right-1 z-20 hover:cursor-pointer hover:scale-[1.2] text-[#F47D48] opacity-50 rotate-90"
+          className="absolute bg-white rounded-full flex justify-center items-center right-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 rotate-90"
         >
           <FontAwesomeIcon
-            className="h-[10vw] w-[10vw] max-h-[60px] max-w-[60px]"
+            className="h-[5vw] w-[5vw] max-h-[60px] max-w-[60px]"
             icon={faAngleUp}
           />
         </span>
