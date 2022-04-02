@@ -30,9 +30,9 @@ export default function NavModal(props) {
             variants={modalVariants}
             initial="hidden"
             animate="visible"
-            className="absolute max-w-[300px] py-[1em] px-[1em] h-[100vh ] top-0 right-0 left-0 z-20 bg-gradient-to-r from-zpurple to-zlpurple flex flex-col drop-shadow-xl"
+            className="absolute max-w-[300px] px-[1em] py-[1em] h-[100vh ] top-0 right-0 left-0 z-20 bg-gradient-to-r from-zpurple to-zlpurple flex flex-col drop-shadow-xl"
           >
-            <div className="flex">
+            <div className="flex justify-between">
               <div
                 className="h-[30vw] w-[25vw] max-h-[138px] max-w-[120px]"
                 onClick={() => {
@@ -42,7 +42,7 @@ export default function NavModal(props) {
                 <LogoStatic />
               </div>
               <div
-                className={chevronClass}
+                className={"hover:cursor-pointer text-zorange"}
                 onClick={() => {
                   setNavOpen(!navOpen);
                 }}
