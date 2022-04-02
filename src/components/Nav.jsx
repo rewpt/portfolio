@@ -17,12 +17,12 @@ const svgVariants = {
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
   const chevronClass = classNames({
-    "hover:cursor-pointer text-zorange": navOpen,
+    hidden: navOpen,
     "hover:cursor-pointer text-zorange rotate-180": !navOpen,
   });
   return (
-    <nav className="flex flex-col px-[1em] w-full top-0 bg-gradient-to-r from-zpurple to-zlpurple">
-      <div className="pt-[1em] flex items-start w-full bg-gradient-to-r from-zpurple to-zlpurple">
+    <nav className="flex flex-col items-center w-full top-0 bg-gradient-to-r from-zpurple to-zlpurple">
+      <div className="pt-[1em] px-[1em] max-w-[1200px] bg-opacity-0 flex justify-between items-start w-full">
         <motion.div className="logo-container h-[30vw] w-[25vw] max-h-[138px] max-w-[120px]">
           <Logo></Logo>
         </motion.div>
@@ -42,7 +42,7 @@ function Nav() {
         </motion.div>
       </div>
       <motion.div
-        className="w-full"
+        className="w-full px-[1em] absolute top-0 max-w-[1200px] bg-opacity-0 flex justify-between items-start"
         variants={svgVariants}
         initial="hidden"
         animate="visible"
