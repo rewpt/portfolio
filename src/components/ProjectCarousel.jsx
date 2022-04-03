@@ -43,7 +43,7 @@ export default function ProjectCarousel() {
   const maxIndex = allProjects.length - 1;
 
   return (
-    <div className="flex justify-center w-full py-[3rem] bg-gradient-to-r from-slate-200 to-slate-100">
+    <div className="flex justify-center w-full py-[3rem] bg-zbg">
       <div
         id="projects"
         className="bg-opacity-0 flex w-[95%] flex-col justify-center items-center"

@@ -55,7 +55,7 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="flex items-center"
+        className="flex"
       >
         <motion.h1
           variants={variants}
@@ -77,7 +77,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[.2em] hover:cursor-pointer hover:text-zorange "
+              className=" h-[3rem] w-[3rem] ml-[3vw] hover:cursor-pointer hover:text-zorange "
               icon={faChrome}
             />
           </motion.a>
@@ -91,7 +91,7 @@ export default function Project(props) {
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[.2em] hover:cursor-pointer hover:text-zorange "
+              className=" h-[3rem] w-[3rem] ml-[2vw] hover:cursor-pointer hover:text-zorange "
               icon={faGithub}
             />
           </motion.a>
