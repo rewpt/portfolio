@@ -45,7 +45,7 @@ export default function Contact() {
       <div className="w-[90%] max-w-[800px] flex justify-center items-center">
         <div
           id="contact"
-          className="flex flex-col justify-center w-full bg-opacity-0"
+          className="flex flex-col justify-center w-full bg-opacity-0 "
         >
           <h2 className="contact-h2">Contact</h2>
           <form
