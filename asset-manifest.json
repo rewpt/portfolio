@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d90da76c.css",
-    "main.js": "/portfolio/static/js/main.f758a1d8.js",
+    "main.css": "/portfolio/static/css/main.61440d85.css",
+    "main.js": "/portfolio/static/js/main.5df46364.js",
     "static/media/catchlight_home.png": "/portfolio/static/media/catchlight_home.646234dd6ec943e8090c.png",
     "static/media/jungle-home.png": "/portfolio/static/media/jungle-home.d6837a686ff83abb9e42.png",
     "static/media/cutout2.png": "/portfolio/static/media/cutout2.ba5df990d7702e609dda.png",
     "static/media/quizapp-home.png": "/portfolio/static/media/quizapp-home.7178f2458b152589cc88.png",
+    "static/media/react480.png": "/portfolio/static/media/react480.47a490592682112eb463.png",
+    "static/media/ruby480.png": "/portfolio/static/media/ruby480.2936bba5c1bc748268ce.png",
+    "static/media/bolt.png": "/portfolio/static/media/bolt.daf0c4b1f373b343264a.png",
+    "static/media/agile.png": "/portfolio/static/media/agile.f4dcd8fd3a40a76603a3.png",
+    "static/media/psql-logo.png": "/portfolio/static/media/psql-logo.6c5d698f195dac2fe5af.png",
+    "static/media/jest-icon.png": "/portfolio/static/media/jest-icon.23770b8c707d5005a9b0.png",
+    "static/media/responsive.svg": "/portfolio/static/media/responsive.ff52f12ca911e478633f614971b2c5ad.svg",
     "index.html": "/portfolio/index.html",
-    "main.d90da76c.css.map": "/portfolio/static/css/main.d90da76c.css.map",
-    "main.f758a1d8.js.map": "/portfolio/static/js/main.f758a1d8.js.map"
+    "main.61440d85.css.map": "/portfolio/static/css/main.61440d85.css.map",
+    "main.5df46364.js.map": "/portfolio/static/js/main.5df46364.js.map"
   },
   "entrypoints": [
-    "static/css/main.d90da76c.css",
-    "static/js/main.f758a1d8.js"
+    "static/css/main.61440d85.css",
+    "static/js/main.5df46364.js"
   ]
 }
