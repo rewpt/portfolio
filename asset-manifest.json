@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.61440d85.css",
-    "main.js": "/portfolio/static/js/main.5df46364.js",
+    "main.css": "/portfolio/static/css/main.9b99ca7c.css",
+    "main.js": "/portfolio/static/js/main.ac3ebc07.js",
     "static/media/catchlight_home.png": "/portfolio/static/media/catchlight_home.646234dd6ec943e8090c.png",
     "static/media/jungle-home.png": "/portfolio/static/media/jungle-home.d6837a686ff83abb9e42.png",
     "static/media/cutout2.png": "/portfolio/static/media/cutout2.ba5df990d7702e609dda.png",
@@ -14,11 +14,11 @@
     "static/media/jest-icon.png": "/portfolio/static/media/jest-icon.23770b8c707d5005a9b0.png",
     "static/media/responsive.svg": "/portfolio/static/media/responsive.ff52f12ca911e478633f614971b2c5ad.svg",
     "index.html": "/portfolio/index.html",
-    "main.61440d85.css.map": "/portfolio/static/css/main.61440d85.css.map",
-    "main.5df46364.js.map": "/portfolio/static/js/main.5df46364.js.map"
+    "main.9b99ca7c.css.map": "/portfolio/static/css/main.9b99ca7c.css.map",
+    "main.ac3ebc07.js.map": "/portfolio/static/js/main.ac3ebc07.js.map"
   },
   "entrypoints": [
-    "static/css/main.61440d85.css",
-    "static/js/main.5df46364.js"
+    "static/css/main.9b99ca7c.css",
+    "static/js/main.ac3ebc07.js"
   ]
 }
