@@ -55,13 +55,13 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="flex"
+        className="proj-title-container flex justify-center w-full"
       >
         <motion.h1
           variants={variants}
           whileHover="h1Hover"
           exit="titleExit"
-          className="text-[2.2rem] hover:cursor-pointer"
+          className="text-[2.2rem] hover:cursor-pointer proj-title"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
@@ -72,12 +72,12 @@ export default function Project(props) {
           <motion.a
             variants={variants}
             whileHover="icoHover"
-            className="webLink"
+            className="webLink place-self-end"
             href={webLink}
             aria-label="webLink"
           >
             <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[3vw] hover:cursor-pointer hover:text-zorange "
+              className=" h-[3rem] w-[3rem] ml-[2vw] hover:cursor-pointer hover:text-zorange "
               icon={faChrome}
             />
           </motion.a>
@@ -121,7 +121,7 @@ export default function Project(props) {
           />
         </span>
 
-        <div className="flex items-center h-[70vw] w-[95vw] max-h-[904px] max-w-[886px] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
+        <div className="flex items-center h-[96vw] w-[95vw] max-h-[900px] max-w-[886px] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"
