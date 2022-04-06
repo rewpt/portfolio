@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Project from "./Project";
-import catchlightHome from "../images/catchlight_home.png";
-import jungleHome from "../images/jungle-home.png";
-import quizAppHome from "../images/quizapp-home.png";
+import catchlightHome from "../images/catchlight.gif";
+import jungleHome from "../images/jungle.gif";
+import quizAppHome from "../images/quizapp.gif";
 import { AnimatePresence } from "framer-motion";
 
 const allProjects = [
@@ -39,7 +39,7 @@ const allProjects = [
 
 export default function ProjectCarousel() {
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const [showDesc, setShowDesc] = useState(false);
+  const [showDesc, setShowDesc] = useState(true);
   const maxIndex = allProjects.length - 1;
 
   return (
