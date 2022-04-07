@@ -1,4 +1,6 @@
-export default function useMediaQuery(query) {
+import {useState, useEffect} from "react"
+
+export function useMediaQuery(query) {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
@@ -9,9 +11,12 @@ export default function useMediaQuery(query) {
     const listener = () => {
       setMatches(media.matches);
     };
-    media.addEventListener(listener);
-    return () => media.removeEventListener(listener);
+    media.addListener(listener);
+    return () => media.removeListener(listener);
   }, [matches, query]);
 
   return matches;
 }
+
+export const useIsSmall = () => useMediaQuery('(max-width: 1100px)');
+export const useIsLarge = () => useMediaQuery('(min-width: 1100px)');
