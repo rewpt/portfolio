@@ -59,39 +59,23 @@ export default function Project(props) {
       >
         <div className="flex-grow">
           {webLink && (
-            <motion.a
-              variants={variants}
-              whileHover="icoHover"
-              className="webLink place-self-end opacity-0"
-              href={webLink}
-              aria-label="webLink"
-            >
-              <FontAwesomeIcon
-                className=" h-[3rem] w-[3rem hover:cursor-pointer hover:text-zorange "
-                icon={faChrome}
-              />
-            </motion.a>
+            <FontAwesomeIcon
+              className=" h-[3rem] w-[3rem] text-zbg "
+              icon={faChrome}
+            />
           )}
           {ghLink && (
-            <motion.a
-              variants={variants}
-              whileHover="icoHover"
-              className="webLink opacity-0"
-              href={ghLink}
-              aria-label="webLink"
-            >
-              <FontAwesomeIcon
-                className=" h-[3rem] w-[3rem]  hover:cursor-pointer hover:text-zorange "
-                icon={faGithub}
-              />
-            </motion.a>
+            <FontAwesomeIcon
+              className=" h-[3rem] w-[3rem]  text-zbg "
+              icon={faGithub}
+            />
           )}
         </div>
         <motion.h1
           variants={variants}
           whileHover="h1Hover"
           exit="titleExit"
-          className="text-[2.2rem] mr-[1rem] text-center justify-self-center hover:cursor-pointer proj-title"
+          className="text-[2.2rem] mx-[1rem] text-center justify-self-center hover:cursor-pointer proj-title"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
