@@ -82,6 +82,11 @@ img {
   .about-container {
     @apply bg-zbg;
   }
+
+  .stack-container {
+    @apply py-[3.5em] flex flex-col items-center bg-zbg;
+  }
+
   .stack-images {
     display: grid;
     grid-gap: 1.5rem;
@@ -91,4 +96,17 @@ img {
   /* .stack-img {
     @apply;
   } */
+
+  @media (min-width: 1100px) {
+    .stack-images {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .increment-carousel {
+      @apply absolute -right-[70px] text-opacity-100 bg-none rounded-none;
+    }
+    .decrement-carousel {
+      @apply absolute -left-[70px] text-opacity-100 bg-none rounded-none;
+    }
+  }
 }
