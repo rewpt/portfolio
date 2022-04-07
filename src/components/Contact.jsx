@@ -41,7 +41,7 @@ export default function Contact() {
     }
   };
   return (
-    <div className="flex justify-center w-full bg-gradient-to-r from-zpurple to-zlpurple py-[3rem]">
+    <div className="flex justify-center w-full bg-gradient-to-r from-zlpurple to-zvlpurple py-[3rem]">
       <div className="w-[90%] max-w-[800px] flex justify-center items-center">
         <div
           id="contact"
