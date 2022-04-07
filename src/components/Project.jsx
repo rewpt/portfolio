@@ -57,7 +57,7 @@ export default function Project(props) {
         exit="titleExit"
         className="proj-title-container flex w-full"
       >
-        <div className="flex-grow">
+        <div className="space-saver space-saver-hidden">
           {webLink && (
             <FontAwesomeIcon
               className=" h-[3rem] w-[3rem] text-zbg "
@@ -75,14 +75,14 @@ export default function Project(props) {
           variants={variants}
           whileHover="h1Hover"
           exit="titleExit"
-          className="text-[2.2rem] mx-[1rem] text-center justify-self-center hover:cursor-pointer proj-title"
+          className="proj-title"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
         >
           {props.children}
         </motion.h1>
-        <motion.div className="project-link-container flex-grow">
+        <motion.div className="project-link-container space-saver">
           {webLink && (
             <motion.a
               variants={variants}
