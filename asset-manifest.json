@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9b99ca7c.css",
-    "main.js": "/portfolio/static/js/main.ac3ebc07.js",
-    "static/media/catchlight_home.png": "/portfolio/static/media/catchlight_home.646234dd6ec943e8090c.png",
-    "static/media/jungle-home.png": "/portfolio/static/media/jungle-home.d6837a686ff83abb9e42.png",
+    "main.css": "/portfolio/static/css/main.602be00b.css",
+    "main.js": "/portfolio/static/js/main.e57fe15b.js",
+    "static/media/catchlight.gif": "/portfolio/static/media/catchlight.a32347c893539872ae68.gif",
+    "static/media/jungle.gif": "/portfolio/static/media/jungle.30ae4734f2794021be04.gif",
+    "static/media/quizapp.gif": "/portfolio/static/media/quizapp.c12228ea2206cc4751c9.gif",
     "static/media/cutout2.png": "/portfolio/static/media/cutout2.ba5df990d7702e609dda.png",
-    "static/media/quizapp-home.png": "/portfolio/static/media/quizapp-home.7178f2458b152589cc88.png",
     "static/media/react480.png": "/portfolio/static/media/react480.47a490592682112eb463.png",
     "static/media/ruby480.png": "/portfolio/static/media/ruby480.2936bba5c1bc748268ce.png",
     "static/media/bolt.png": "/portfolio/static/media/bolt.daf0c4b1f373b343264a.png",
@@ -14,11 +14,11 @@
     "static/media/jest-icon.png": "/portfolio/static/media/jest-icon.23770b8c707d5005a9b0.png",
     "static/media/responsive.svg": "/portfolio/static/media/responsive.ff52f12ca911e478633f614971b2c5ad.svg",
     "index.html": "/portfolio/index.html",
-    "main.9b99ca7c.css.map": "/portfolio/static/css/main.9b99ca7c.css.map",
-    "main.ac3ebc07.js.map": "/portfolio/static/js/main.ac3ebc07.js.map"
+    "main.602be00b.css.map": "/portfolio/static/css/main.602be00b.css.map",
+    "main.e57fe15b.js.map": "/portfolio/static/js/main.e57fe15b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b99ca7c.css",
-    "static/js/main.ac3ebc07.js"
+    "static/css/main.602be00b.css",
+    "static/js/main.e57fe15b.js"
   ]
 }
