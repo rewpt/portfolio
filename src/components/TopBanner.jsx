@@ -15,7 +15,7 @@ export default function TopBanner() {
   return (
     <div
       id="top-banner"
-      className="flex flex-col pb-[2rem] w-full items-center bg-gradient-to-r from-zpurple to-zlpurple "
+      className="flex flex-col pb-[2rem] w-full items-center bg-gradient-to-r from-zlpurple to-zvlpurple "
     >
       <motion.div
         className="flex flex-col-reverse w-[80%] mb-[2rem] items-center opacity-0"
