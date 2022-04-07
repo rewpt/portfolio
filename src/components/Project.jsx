@@ -55,47 +55,79 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="proj-title-container flex justify-center w-full"
+        className="proj-title-container flex w-full"
       >
+        <div className="flex-grow">
+          {webLink && (
+            <motion.a
+              variants={variants}
+              whileHover="icoHover"
+              className="webLink place-self-end opacity-0"
+              href={webLink}
+              aria-label="webLink"
+            >
+              <FontAwesomeIcon
+                className=" h-[3rem] w-[3rem hover:cursor-pointer hover:text-zorange "
+                icon={faChrome}
+              />
+            </motion.a>
+          )}
+          {ghLink && (
+            <motion.a
+              variants={variants}
+              whileHover="icoHover"
+              className="webLink opacity-0"
+              href={ghLink}
+              aria-label="webLink"
+            >
+              <FontAwesomeIcon
+                className=" h-[3rem] w-[3rem]  hover:cursor-pointer hover:text-zorange "
+                icon={faGithub}
+              />
+            </motion.a>
+          )}
+        </div>
         <motion.h1
           variants={variants}
           whileHover="h1Hover"
           exit="titleExit"
-          className="text-[2.2rem] hover:cursor-pointer proj-title"
+          className="text-[2.2rem] mr-[1rem] text-center justify-self-center hover:cursor-pointer proj-title"
           onClick={() => {
             setShowDesc(!showDesc);
           }}
         >
           {props.children}
         </motion.h1>
-        {webLink && (
-          <motion.a
-            variants={variants}
-            whileHover="icoHover"
-            className="webLink place-self-end"
-            href={webLink}
-            aria-label="webLink"
-          >
-            <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[2vw] hover:cursor-pointer hover:text-zorange "
-              icon={faChrome}
-            />
-          </motion.a>
-        )}
-        {ghLink && (
-          <motion.a
-            variants={variants}
-            whileHover="icoHover"
-            className="webLink"
-            href={ghLink}
-            aria-label="webLink"
-          >
-            <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] ml-[2vw] hover:cursor-pointer hover:text-zorange "
-              icon={faGithub}
-            />
-          </motion.a>
-        )}
+        <motion.div className="project-link-container flex-grow">
+          {webLink && (
+            <motion.a
+              variants={variants}
+              whileHover="icoHover"
+              className="webLink mr-[1rem]"
+              href={webLink}
+              aria-label="webLink"
+            >
+              <FontAwesomeIcon
+                className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
+                icon={faChrome}
+              />
+            </motion.a>
+          )}
+          {ghLink && (
+            <motion.a
+              variants={variants}
+              whileHover="icoHover"
+              className="webLink"
+              href={ghLink}
+              aria-label="webLink"
+            >
+              <FontAwesomeIcon
+                className=" h-[3rem] w-[3rem]  hover:cursor-pointer hover:text-zorange "
+                icon={faGithub}
+              />
+            </motion.a>
+          )}
+        </motion.div>
       </motion.div>
       {showDesc && (
         <motion.h2
@@ -103,7 +135,7 @@ export default function Project(props) {
           initial="titleInitial"
           animate="titleAnimate"
           exit="titleExit"
-          className=" max-w-[800px] mt-[1rem] text-[1.1rem] mx-[1em] italic"
+          className=" max-w-[800px] mt-[1rem] text-[1.1rem] italic"
         >
           {" "}
           {description}
@@ -113,7 +145,7 @@ export default function Project(props) {
       <div className="flex relative items-center">
         <span
           onClick={decrementCarouselIndex}
-          className="absolute bg-white rounded-full flex justify-center items-center left-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 -rotate-90"
+          className="decrement-carousel absolute bg-white rounded-full flex justify-center items-center left-[.5rem] z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 -rotate-90"
         >
           <FontAwesomeIcon
             className="h-[5vw] w-[5vw] max-h-[60px] max-w-[60px]"
@@ -134,7 +166,7 @@ export default function Project(props) {
 
         <span
           onClick={incrementCarouselIndex}
-          className="absolute bg-white rounded-full flex justify-center items-center right-1 z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 rotate-90"
+          className="increment-carousel absolute bg-white rounded-full flex justify-center items-center right-[.5rem] z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 rotate-90"
         >
           <FontAwesomeIcon
             className="h-[5vw] w-[5vw] max-h-[60px] max-w-[60px]"
