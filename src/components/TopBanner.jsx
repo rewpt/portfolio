@@ -26,10 +26,10 @@ export default function TopBanner() {
         <a href="#projects">
           <Button>Projects</Button>
         </a>
-        <p className=" mb-[1em] mt-10 text-zorange text-[1.5rem] max-w-[600px]">
+        <p className="top-banner-text">
           Hi! My name is
-          <span className="text-zdgreen font-bold"> Zev Permack. </span> I build
-          web apps that grow your business!
+          <span className="highlight-text"> Zev Permack. </span> I build web
+          apps that grow your business!
         </p>
         <div className="flex justify-center items-end border-2 rounded-full border-black overflow-hidden drop-shadow-xl mt-[1rem] w-[75vw] h-[75vw] max-h-[400px] max-w-[400px] bg-gradient-to-r from-zdgreen to-zdgreen ">
           <img
