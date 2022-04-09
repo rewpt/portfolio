@@ -67,7 +67,7 @@ export default function NavModal(props) {
                   <LogoStatic />
                 </div>
                 <div
-                  className={"hover:cursor-pointer text-zorange"}
+                  className={"hover:cursor-pointer text-zbg hover:text-zdgreen"}
                   onClick={() => {
                     setNavOpen(!navOpen);
                   }}
@@ -80,7 +80,7 @@ export default function NavModal(props) {
               </div>
             )}
             {isLarge && <div className="spacer flex-1 "></div>}
-            <a
+            {/* <a
               href="#projects"
               onClick={() => {
                 setNavOpen(false);
@@ -92,12 +92,12 @@ export default function NavModal(props) {
                 )}
                 <span class="modal-text">Projects</span>
               </li>
-            </a>
+            </a> */}
 
             <div
               onClick={() => {
                 openInNewTab("https://www.github.com/rewpt");
-                setNavOpen(false);
+                if (isSmall) setNavOpen(false);
               }}
             >
               <li className="modal-item-container">
@@ -112,7 +112,7 @@ export default function NavModal(props) {
                 openInNewTab(
                   "https://drive.google.com/file/d/1LvfcKpNCgrGiniY0qRUgVfzDgAr626ON/view?usp=sharing"
                 );
-                setNavOpen(false);
+                if (isSmall) setNavOpen(false);
               }}
             >
               <li className="modal-item-container">
@@ -124,7 +124,7 @@ export default function NavModal(props) {
             </div>
             <a
               onClick={() => {
-                setNavOpen(false);
+                if (isSmall) setNavOpen(false);
               }}
               href="#contact"
               className="flex-1"
