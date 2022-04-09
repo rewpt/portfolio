@@ -18,7 +18,7 @@ function Nav() {
   const [navOpen, setNavOpen] = useState(false);
   const chevronClass = classNames({
     hidden: navOpen,
-    "hover:cursor-pointer text-zorange rotate-180": !navOpen,
+    "hover:cursor-pointer hover:text-zdgreen text-zbg rotate-180": !navOpen,
   });
   return (
     <nav className="flex flex-col items-center w-full top-0 bg-gradient-to-r from-zlpurple to-zvlpurple">
