@@ -3,13 +3,23 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Open+Sans:ital,wght@0,300;1,300&family=Playfair+Display+SC:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 body {
+  font-family: "Fira Code", monospace;
+}
+
+h1 {
   font-family: "Aleo", serif;
 }
 
 img {
   max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -22,8 +32,14 @@ img {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .top-banner-text {
+    @apply mb-[1em] mt-10 text-zbg text-[1.5rem] max-w-[600px];
+  }
+  .highlight-text {
+    @apply text-zorange font-bold;
+  }
   .form-container {
-    @apply flex flex-col px-[.6em] text-[1.2rem] border-l-[.3rem] border-t-zorange border-l-zgreen bg-white w-full drop-shadow-xl;
+    @apply flex flex-col px-[.6em] text-[1.2rem] border-l-[.3rem] border-t-zbg border-l-zgreen bg-white w-full drop-shadow-xl;
   }
   .form-input {
     @apply flex-grow border-b-[2px] mb-[.5em] focus:border-b-[3px] focus:outline-none border-b-black;
@@ -39,7 +55,7 @@ img {
     @apply flex justify-center p-2 rounded-t-lg border-l-[.3rem] border-t-[.4rem] border-t-zdgreen border-l-zgreen bg-white w-full text-[2.2rem] col-span-12 mb-0 drop-shadow-xl;
   }
   .form-button {
-    @apply self-center hover:scale-[1.1] text-[1.5em] rounded-lg py-[.3em] px-[1em] bg-zorange drop-shadow-xl;
+    @apply self-center hover:scale-[1.1] text-[1.5em] rounded-lg py-[.3em] px-[1em] bg-zdgreen drop-shadow-xl;
   }
   .form-label {
     @apply text-[1.2rem] font-medium;
@@ -48,7 +64,7 @@ img {
     @apply text-[1.6rem] self-center ml-[1em];
   }
   .modal-item-container {
-    @apply flex w-full hover:drop-shadow-xl hover:cursor-pointer text-zorange opacity-90 hover:opacity-100 mt-[20px];
+    @apply flex w-full hover:drop-shadow-xl hover:cursor-pointer text-zbg opacity-90 hover:opacity-100 hover:text-zdgreen mt-[20px];
   }
   .modal-icon {
     @apply h-[60px] w-[60px];
@@ -57,7 +73,7 @@ img {
     @apply flex flex-col items-center;
   }
   .keyword-item {
-    @apply flex flex-col p-[2rem] w-3/4 max-h-[350px] items-center justify-center bg-gradient-to-r from-zlpurple to-zvlpurple;
+    @apply flex flex-col hover:drop-shadow-xl hover:scale-[1.01] p-[2rem] w-3/4 max-h-[350px] items-center justify-center bg-opacity-0;
   }
 
   .keyword-item + .keyword-item {
@@ -65,16 +81,16 @@ img {
   }
 
   .about-container {
-    @apply flex flex-col py-[2rem] items-center;
+    @apply flex flex-col py-[4rem] items-center;
   }
   .believe-title {
-    @apply text-[2rem] mb-[1em] text-zdgreen;
+    @apply text-[2rem] mb-[1em];
   }
   .buzzword {
-    @apply text-center text-slate-200 font-bold text-[1.3rem] mb-[1.5rem];
+    @apply text-center  font-bold text-[1.3rem] mb-[1.5rem];
   }
   .buzz-desc {
-    @apply text-center text-[1.2rem] text-zgreen;
+    @apply text-center text-[1.2rem];
   }
   .stack-title {
     @apply mb-[1em] text-[2em];
@@ -127,6 +143,9 @@ img {
     }
     .decrement-carousel {
       @apply absolute -left-[70px] text-opacity-100 bg-none rounded-none;
+    }
+    .keyword-container {
+      @apply flex flex-row justify-center;
     }
     /*.modal-container {
       @apply absolute max-w-[300px] px-[1em] py-[1em] top-0 right-0 z-20 bg-none flex flex-row drop-shadow-xl;
