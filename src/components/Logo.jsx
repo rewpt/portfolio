@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useWindowDimensions } from "../hooks/useWindowDimensions";
 
 const svgVariants = {
-  hidden: { scale: 0.1, rotate: -180, x: "40vw", y: "30vh" },
+  hidden: { scale: 0.1, rotate: -360, x: "0", y: "100px" },
   visible: {
     scale: 2,
     rotate: 0,
-    x: "40vw",
-    y: "30vh",
-    transition: { duration: 1.5 },
+    x: "0vw",
+    y: "100px",
+    transition: { duration: 2 },
   },
   exit: {
     x: 25,
@@ -17,11 +18,11 @@ const svgVariants = {
 };
 
 const svgVariants2 = {
-  initial: { scale: 2, x: "40vw", y: "30vh" },
+  initial: { scale: 2, translateX: "0vw", y: "100px" },
   animate: {
     scale: 1,
-    x: "0vw",
-    y: "0vh",
+    translateX: "0vw",
+    y: "0px",
     type: "spring",
     ease: "easeInOut",
     transition: { duration: 2 },
@@ -33,16 +34,64 @@ const pathVariants = {
   visible: {
     opacity: 1,
     pathLength: 1,
-    transition: { duration: 3 },
+    transition: { duration: 4 },
   },
 };
 
 export default function Logo() {
   const [initialAnimation, setInitialAnimation] = useState(true);
+  const [logoTranslateX, setLogoTranslateX] = useState(0);
+  const { height, width } = useWindowDimensions();
+
+  useEffect(() => {
+    setLogoTranslateX(100 + (width - 300));
+    console.log(logoTranslateX);
+  }, []);
+
+  const svgVariants = {
+    hidden: {
+      scale: 0.1,
+      rotate: -360,
+      x: `${logoTranslateX}px`,
+      y: "30vh",
+    },
+    visible: {
+      scale: 2,
+      rotate: 0,
+      x: `${logoTranslateX}px`,
+      y: "30vh",
+      transition: { duration: 2 },
+    },
+    exit: {
+      x: 25,
+    },
+  };
+
+  const svgVariants2 = {
+    initial: { scale: 2, x: `${logoTranslateX}px`, y: "30vh" },
+    animate: {
+      scale: 1,
+      x: "0px",
+      y: "0px",
+      type: "spring",
+      ease: "easeInOut",
+      transition: { duration: 2 },
+    },
+  };
+
+  const pathVariants = {
+    hidden: { opacity: 0, pathLength: 0 },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: { duration: 4 },
+    },
+  };
+
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setInitialAnimation(!initialAnimation);
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearInterval(timeOut);
