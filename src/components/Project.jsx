@@ -119,7 +119,7 @@ export default function Project(props) {
           initial="titleInitial"
           animate="titleAnimate"
           exit="titleExit"
-          className=" max-w-[800px] mt-[1rem] text-[1.1rem] italic"
+          className=" max-w-[800px] mt-[1rem] text-[1.2rem] italic"
         >
           {" "}
           {description}
@@ -163,10 +163,10 @@ export default function Project(props) {
         initial="titleInitial"
         animate="titleAnimate"
         exit="titleExit"
-        className="mt-[20px] mx-[.5em] text-[1rem] flex"
+        className="mt-[20px] mx-[.5em] text-[1.3rem] flex"
       >
-        <span>Crafted with:</span>
-        <ul className="flex ">
+        <span className="flex-1">Crafted with:</span>
+        <ul className="flex flex-wrap ">
           {stack.map((el, index) => {
             if (index !== stack.length - 1) {
               return (
