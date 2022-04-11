@@ -90,7 +90,7 @@ export default function NavModal(props) {
                 {isSmall && (
                   <FontAwesomeIcon className="modal-icon" icon={faFolder} />
                 )}
-                <span class="modal-text">Projects</span>
+                <span className="modal-text">Projects</span>
               </li>
             </a> */}
 
@@ -104,7 +104,7 @@ export default function NavModal(props) {
                 {isSmall && (
                   <FontAwesomeIcon className="modal-icon" icon={faGithub} />
                 )}
-                <span class="modal-text">Github</span>
+                <span className="modal-text">Github</span>
               </li>
             </div>
             <div
@@ -119,7 +119,7 @@ export default function NavModal(props) {
                 {isSmall && (
                   <FontAwesomeIcon className="modal-icon" icon={faFile} />
                 )}
-                <span class="modal-text">Resume</span>
+                <span className="modal-text">Resume</span>
               </li>
             </div>
             <a
@@ -133,7 +133,7 @@ export default function NavModal(props) {
                 {isSmall && (
                   <FontAwesomeIcon className="modal-icon" icon={faEnvelope} />
                 )}
-                <span class="modal-text">Contact</span>
+                <span className="modal-text">Contact</span>
               </li>
             </a>
           </motion.ul>
