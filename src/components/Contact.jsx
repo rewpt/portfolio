@@ -47,7 +47,7 @@ export default function Contact() {
           id="contact"
           className="flex flex-col justify-center w-full bg-opacity-0 "
         >
-          <h2 className="contact-h2">Contact</h2>
+          <h1 className="contact-h1">Contact</h1>
           <form
             onSubmit={(e) => {
               e.preventDefault();
