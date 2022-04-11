@@ -7,11 +7,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 body {
-  font-family: "Fira Code", monospace;
+  font-family: "Aleo", serif;
 }
 
-h1 {
-  font-family: "Aleo", serif;
+h1,
+.buzz-desc,
+.modal-text,
+.top-banner-text {
+  font-family: "Fira Code", monospace;
 }
 
 img {
@@ -51,7 +54,7 @@ html {
   .form-text {
     @apply h-full p-1 w-full border-[2px] focus:border-[3px] mb-2 focus:outline-none border-black;
   }
-  .contact-h2 {
+  .contact-h1 {
     @apply flex justify-center p-2 rounded-t-lg border-l-[.3rem] border-t-[.4rem] border-t-zdgreen border-l-zgreen bg-white w-full text-[2.2rem] col-span-12 mb-0 drop-shadow-xl;
   }
   .form-button {
@@ -73,7 +76,11 @@ html {
     @apply flex flex-col items-center;
   }
   .keyword-item {
-    @apply flex flex-col hover:drop-shadow-xl hover:scale-[1.01] p-[2rem] w-3/4 max-h-[350px] items-center justify-center bg-opacity-0;
+    @apply flex flex-col hover:scale-[1.01] p-[2rem] w-3/4 max-h-[350px] items-center justify-center bg-opacity-0;
+  }
+
+  .keyword-item:hover {
+    box-shadow: 0 0 35px -2px rgb(0 0 0 / 20%);
   }
 
   .keyword-item + .keyword-item {
@@ -81,7 +88,7 @@ html {
   }
 
   .about-container {
-    @apply flex flex-col py-[4rem] items-center;
+    @apply flex flex-col p-[4rem] items-center;
   }
   .believe-title {
     @apply text-[2rem] mb-[1em];
