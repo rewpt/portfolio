@@ -3,75 +3,54 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { useWindowDimensions } from "../hooks/useWindowDimensions";
 
-const svgVariants = {
-  hidden: { scale: 0.1, rotate: -360, x: "0", y: "100px" },
-  visible: {
-    scale: 2,
-    rotate: 0,
-    x: "0vw",
-    y: "100px",
-    transition: { duration: 2 },
-  },
-  exit: {
-    x: 25,
-  },
-};
-
-const svgVariants2 = {
-  initial: { scale: 2, translateX: "0vw", y: "100px" },
-  animate: {
-    scale: 1,
-    translateX: "0vw",
-    y: "0px",
-    type: "spring",
-    ease: "easeInOut",
-    transition: { duration: 2 },
-  },
-};
-
-const pathVariants = {
-  hidden: { opacity: 0, pathLength: 0 },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    transition: { duration: 4 },
-  },
-};
-
 export default function Logo() {
   const [initialAnimation, setInitialAnimation] = useState(true);
-  const [logoTranslateX, setLogoTranslateX] = useState(0);
-  const { height, width } = useWindowDimensions();
+  const [logoTranslateX, setLogoTranslateX] = useState(50);
+  const { width } = useWindowDimensions();
+  const [translateUnits, setTranslateUnits] = useState("vw");
 
   useEffect(() => {
-    setLogoTranslateX(100 + (width - 300));
-    console.log(logoTranslateX);
+    if (width <= 750) {
+      if (width >= 100 && width <= 500) setLogoTranslateX(30);
+      else if (width > 500 && width <= 550) setLogoTranslateX(32);
+      else if (width > 550 && width <= 600) setLogoTranslateX(35);
+      else if (width > 600 && width <= 650) setLogoTranslateX(37);
+      else if (width > 651 && width <= 700) setLogoTranslateX(38);
+      else if (width > 700 && width <= 750) setLogoTranslateX(39);
+    } else {
+      if (width > 750 && width <= 850) setLogoTranslateX(41);
+      else if (width > 850 && width <= 950) setLogoTranslateX(42);
+      else if (width > 950 && width <= 1050) setLogoTranslateX(43);
+      else if (width > 1050 && width <= 1150) setLogoTranslateX(44);
+      else if (width > 1150 && width < 1200) setLogoTranslateX(45);
+      else if (width >= 1200) {
+        setLogoTranslateX(540);
+        setTranslateUnits("px");
+      }
+    }
   }, []);
 
   const svgVariants = {
     hidden: {
       scale: 0.1,
-      rotate: -360,
-      x: `${logoTranslateX}px`,
+      rotate: -180,
+      x: `44vw`,
       y: "30vh",
     },
     visible: {
       scale: 2,
       rotate: 0,
-      x: `${logoTranslateX}px`,
+      x: `${logoTranslateX}${translateUnits}`,
       y: "30vh",
-      transition: { duration: 2 },
-    },
-    exit: {
-      x: 25,
+      transition: { duration: 1.8 },
     },
   };
 
   const svgVariants2 = {
-    initial: { scale: 2, x: `${logoTranslateX}px`, y: "30vh" },
+    initial: { scale: 2, x: `${logoTranslateX}${translateUnits}`, y: "30vh" },
     animate: {
       scale: 1,
-      x: "0px",
+      x: `0${translateUnits}`,
       y: "0px",
       type: "spring",
       ease: "easeInOut",
@@ -106,7 +85,6 @@ export default function Logo() {
             variants={svgVariants}
             initial="hidden"
             animate="visible"
-            exit="exit"
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
