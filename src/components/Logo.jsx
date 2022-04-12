@@ -35,19 +35,19 @@ export default function Logo() {
       scale: 0.1,
       rotate: -180,
       x: `44vw`,
-      y: "30vh",
+      y: "25vh",
     },
     visible: {
       scale: 2,
       rotate: 0,
       x: `${logoTranslateX}${translateUnits}`,
-      y: "30vh",
+      y: "25vh",
       transition: { duration: 1.8 },
     },
   };
 
   const svgVariants2 = {
-    initial: { scale: 2, x: `${logoTranslateX}${translateUnits}`, y: "30vh" },
+    initial: { scale: 2, x: `${logoTranslateX}${translateUnits}`, y: "25vh" },
     animate: {
       scale: 1,
       x: `0${translateUnits}`,
