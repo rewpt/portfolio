@@ -57,20 +57,22 @@ export default function Project(props) {
         exit="titleExit"
         className="proj-title-container flex w-full"
       >
-        <div className="space-saver space-saver-hidden">
-          {webLink && (
-            <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem] text-zbg "
-              icon={faChrome}
-            />
-          )}
+        <motion.div className="project-link-container flex justify-end space-saver ">
           {ghLink && (
-            <FontAwesomeIcon
-              className=" h-[3rem] w-[3rem]  text-zbg "
-              icon={faGithub}
-            />
+            <motion.a
+              variants={variants}
+              whileHover="icoHover"
+              className="webLink "
+              href={ghLink}
+              aria-label="webLink"
+            >
+              <FontAwesomeIcon
+                className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
+                icon={faGithub}
+              />
+            </motion.a>
           )}
-        </div>
+        </motion.div>
         <motion.h1
           variants={variants}
           whileHover="h1Hover"
@@ -94,20 +96,6 @@ export default function Project(props) {
               <FontAwesomeIcon
                 className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
                 icon={faChrome}
-              />
-            </motion.a>
-          )}
-          {ghLink && (
-            <motion.a
-              variants={variants}
-              whileHover="icoHover"
-              className="webLink"
-              href={ghLink}
-              aria-label="webLink"
-            >
-              <FontAwesomeIcon
-                className=" h-[3rem] w-[3rem]  hover:cursor-pointer hover:text-zorange "
-                icon={faGithub}
               />
             </motion.a>
           )}
