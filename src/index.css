@@ -168,9 +168,6 @@ html {
     }*/
   }
   @media (max-width: 450px) {
-    .space-saver-hidden {
-      @apply hidden;
-    }
     .proj-title-container {
       @apply flex justify-center;
     }
