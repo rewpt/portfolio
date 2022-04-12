@@ -36,7 +36,13 @@ html {
     scrollbar-width: none; /* Firefox */
   }
   .top-banner-text {
-    @apply mb-[1em] mt-10 text-zbg text-[1.5rem] max-w-[600px];
+    @apply mb-[2rem] mt-[4rem] text-zbg text-[1.5rem] max-w-[600px];
+  }
+  .top-banner-container {
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+  }
+  .top-banner-container {
+    @apply flex flex-col pb-[2rem] w-full items-center bg-gradient-to-r from-zlpurple to-zvlpurple;
   }
   .highlight-text {
     @apply text-zorange font-bold;
@@ -88,7 +94,7 @@ html {
   }
 
   .about-container {
-    @apply flex flex-col p-[4rem] items-center;
+    @apply flex flex-col py-[4rem] items-center;
   }
   .believe-title {
     @apply text-[2rem] mb-[1em];
@@ -153,6 +159,9 @@ html {
     }
     .keyword-container {
       @apply flex flex-row justify-center;
+    }
+    .about-container {
+      @apply flex flex-col p-[4rem] items-center;
     }
     /*.modal-container {
       @apply absolute max-w-[300px] px-[1em] py-[1em] top-0 right-0 z-20 bg-none flex flex-row drop-shadow-xl;
