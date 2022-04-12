@@ -13,10 +13,7 @@ const svgVariants = {
 
 export default function TopBanner() {
   return (
-    <div
-      id="top-banner"
-      className="flex flex-col pb-[2rem] w-full items-center bg-gradient-to-r from-zlpurple to-zvlpurple "
-    >
+    <div id="top-banner" className="top-banner-container ">
       <motion.div
         className="flex flex-col-reverse w-[80%] mb-[2rem] items-center opacity-0"
         variants={svgVariants}
@@ -31,7 +28,7 @@ export default function TopBanner() {
           <span className="highlight-text"> Zev Permack. </span> I build web
           apps that grow your business!
         </p>
-        <div className="flex justify-center items-end border-2 rounded-full border-black overflow-hidden drop-shadow-xl mt-[1rem] w-[75vw] h-[75vw] max-h-[400px] max-w-[400px] bg-gradient-to-r from-zdgreen to-zdgreen ">
+        <div className="flex justify-center items-end border-2 rounded-full border-black overflow-hidden drop-shadow-xl mt-[3rem] w-[75vw] h-[75vw] max-h-[400px] max-w-[400px] bg-gradient-to-r from-zdgreen to-zdgreen ">
           <img
             src={face}
             className="face h-[60vw] max-h-[350px] max-w-none"
