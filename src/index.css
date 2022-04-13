@@ -82,11 +82,11 @@ html {
     @apply flex flex-col items-center;
   }
   .keyword-item {
-    @apply flex flex-col hover:scale-[1.01] p-[2rem] w-3/4 max-h-[350px] items-center justify-center bg-opacity-0;
+    @apply flex flex-col hover:scale-[1.02] p-[2rem] w-3/4 max-h-[350px] items-center justify-center bg-opacity-0;
   }
 
-  .keyword-item:hover {
-    box-shadow: 0 0 35px -2px rgb(0 0 0 / 20%);
+  .keyword-item {
+    box-shadow: 0 0 15px -2px rgb(0 0 0 / 20%);
   }
 
   .keyword-item + .keyword-item {
@@ -143,6 +143,11 @@ html {
   } */
 
   @media (min-width: 1100px) {
+    .keyword-item + .keyword-item {
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+
     .stack-images {
       @apply flex flex-col;
       gap: 1.5rem;
