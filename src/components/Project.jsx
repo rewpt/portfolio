@@ -65,6 +65,8 @@ export default function Project(props) {
               className="webLink "
               href={ghLink}
               aria-label="webLink"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
@@ -92,6 +94,8 @@ export default function Project(props) {
               className="webLink mr-[1rem]"
               href={webLink}
               aria-label="webLink"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
