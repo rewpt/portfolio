@@ -9,7 +9,7 @@ export default function () {
       {/* <h2 className="believe-title">I believe in</h2> */}
       <ul className="keyword-container">
         <div className="keyword-item">
-          <div className="h-[20vw] w-[15.4vw] max-w-[180px] max-h-[180px] mb-[1rem]">
+          <div className="h-[20vw] w-[15.4vw] max-w-[235px] max-h-[180px] mb-[1rem]">
             <img className="" src={Bolt} alt="" />
           </div>
           <h3 className="buzzword">Fast & scalable code</h3>
