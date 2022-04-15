@@ -1,7 +1,7 @@
 import React from "react";
-import Agile from "../images/about/agile.png";
-import Responsive from "../images/about/responsive.svg";
-import Bolt from "../images/about/bolt.png";
+import Agile from "../images/about/agileai.png";
+import Responsive from "../images/about/responsiveai.png";
+import Bolt from "../images/about/boltai.png";
 
 export default function () {
   return (
@@ -9,7 +9,7 @@ export default function () {
       {/* <h2 className="believe-title">I believe in</h2> */}
       <ul className="keyword-container">
         <div className="keyword-item">
-          <div className="h-[20vw] w-[15.4vw] max-w-[235px] max-h-[180px] mb-[1rem]">
+          <div className="h-[20vw] w-[15.4vw] max-w-[90px] max-h-[70px] mb-[1rem]">
             <img className="" src={Bolt} alt="" />
           </div>
           <h3 className="buzzword">Fast & scalable code</h3>
@@ -18,7 +18,7 @@ export default function () {
           </span>
         </div>
         <div className="keyword-item">
-          <div className="h-[20vw] w-[20vw] max-w-[235px] max-h-[180px] mt-[1rem] mb-[1rem]">
+          <div className="h-[20vw] w-[20vw] max-w-[90px] max-h-[70px] mt-[1rem] mb-[1rem]">
             <img src={Agile} alt="" />
           </div>
           <h3 className="buzzword">Agile Development</h3>
@@ -28,7 +28,7 @@ export default function () {
           </span>
         </div>
         <div className="keyword-item drop-shadow-sm">
-          <div className="h-[20vw] w-[20vw] max-w-[235px] max-h-[180px] mt-[1rem] mb-[1rem]">
+          <div className="h-[20vw] w-[20vw] max-w-[90px] max-h-[70px] mt-[1rem] mb-[1rem]">
             <img src={Responsive} alt="" />
           </div>
           <h3 className="buzzword">Responsive Layouts</h3>
