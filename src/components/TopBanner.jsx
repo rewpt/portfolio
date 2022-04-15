@@ -23,7 +23,7 @@ export default function TopBanner() {
         <a href="#projects">
           <Button>Projects</Button>
         </a>
-        <p className="top-banner-text">
+        <p className="top-banner-text text-center">
           Hi! My name is
           <span className="highlight-text"> Zev Permack. </span> I build web
           apps that grow your business!
