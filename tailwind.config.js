@@ -25,6 +25,7 @@ module.exports = {
         zlgreen: 'rgb(216,219,207)',
         zdgreen: 'rgb(161, 171, 130)',
         zbg: '#FBFBFD',
+        zgrey: '#f2f4f5',
 
       }
     },
