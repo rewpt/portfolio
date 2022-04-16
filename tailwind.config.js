@@ -10,7 +10,6 @@ module.exports = {
         'md': '700px',
         'lg': '1200px',
         'xl': '1375px',
-        // => @media (min-width: 992px) { ... }
       },
       colors : {
         zorange: 'rgb(217,141,103)',
@@ -26,6 +25,11 @@ module.exports = {
         zdgreen: 'rgb(161, 171, 130)',
         zbg: '#FBFBFD',
         zgrey: '#f2f4f5',
+        sapphireblue: '#166495ff',
+        middleblue: '#88C3D1ff',
+        grullo: '#AEA192ff',
+        honolulublue: '#1F6C9Fff',
+        shadowblue: '#8199B0ff',
 
       }
     },
