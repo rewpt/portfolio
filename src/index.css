@@ -42,7 +42,7 @@ html {
     background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
   }
   .top-banner-container {
-    @apply flex flex-col pb-[2rem] w-full items-center bg-gradient-to-r from-zlpurple to-zvlpurple;
+    @apply flex flex-col pb-[2rem] w-full items-center bg-gradient-to-r from-zblue to-zhonolulublue;
   }
   .highlight-text {
     @apply text-zorange font-bold;
