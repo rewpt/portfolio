@@ -28,7 +28,7 @@ export default function TopBanner() {
           <span className="highlight-text"> Zev Permack. </span> I build web
           apps that grow your business!
         </p>
-        <div className="flex justify-center items-end border-2 rounded-full border-black overflow-hidden drop-shadow-xl mt-[3rem] w-[75vw] h-[75vw] max-h-[400px] max-w-[400px] bg-gradient-to-r from-zdgreen to-zdgreen ">
+        <div className="flex justify-center items-end border-2 rounded-full border-black overflow-hidden drop-shadow-xl mt-[3rem] w-[75vw] h-[75vw] max-h-[400px] max-w-[400px] bg-gradient-to-r from-zgrullo to-zgrullo ">
           <img
             src={face}
             className="face h-[60vw] max-h-[350px] max-w-none"
