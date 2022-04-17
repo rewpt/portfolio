@@ -25,11 +25,11 @@ module.exports = {
         zdgreen: 'rgb(161, 171, 130)',
         zbg: '#FBFBFD',
         zgrey: '#f2f4f5',
-        sapphireblue: '#166495ff',
-        middleblue: '#88C3D1ff',
-        grullo: '#AEA192ff',
-        honolulublue: '#1F6C9Fff',
-        shadowblue: '#8199B0ff',
+        zblue: '#166495ff',
+        zmiddleblue: '#88C3D1ff',
+        zgrullo: '#AEA192ff',
+        zhonolulublue: '#1F6C9Fff',
+        zshadowblue: '#8199B0ff',
 
       }
     },
