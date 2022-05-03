@@ -29,7 +29,7 @@ export default function NavModal(props) {
 
   const modalContainer = classNames(
     {
-      "absolute max-w-[300px] px-[1em] py-[1em] top-0 right-0 left-0 z-20 bg-gradient-to-r from-zlpurple to-zvlpurple flex flex-col drop-shadow-xl":
+      "absolute max-w-[300px] px-[1em] py-[1em] top-0 right-0 left-0 z-20 bg-gradient-to-r from-zblue to-zhonolulublue flex flex-col drop-shadow-xl":
         isSmall,
     },
     {
