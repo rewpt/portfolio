@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NavModal from "./NavModal";
 import Logo from "./Logo";
+import { useIsSmall } from "../hooks/useMediaQuery";
+import { useIsLarge } from "../hooks/useMediaQuery";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
@@ -20,9 +22,15 @@ function Nav() {
     hidden: navOpen,
     "hover:cursor-pointer hover:text-zdgreen text-zbg rotate-180": !navOpen,
   });
+  const logoDivWidth = classNames({
+    "max-w-[300px] self-start": useIsSmall(),
+    "max-w-[1200px]": useIsLarge(),
+  });
   return (
-    <nav className="flex flex-col items-center w-full top-0 bg-gradient-to-r from-zlpurple to-zvlpurple">
-      <div className="pt-[1em] px-[1em] max-w-[1200px] bg-opacity-0 flex justify-between items-start w-full">
+    <nav className="flex flex-col items-center w-full top-0 bg-gradient-to-r from-zblue to-zhonolulublue">
+      <div
+        className={`pt-[1em] px-[1em] ${logoDivWidth} bg-opacity-0 flex justify-between items-start w-full`}
+      >
         <motion.div className="logo-container h-[30vw] w-[25vw] max-h-[138px] max-w-[120px]">
           <Logo></Logo>
         </motion.div>
