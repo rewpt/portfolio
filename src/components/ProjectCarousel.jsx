@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Project from "./Project";
+import ProjectMenu from "./ProjectMenu";
 import catchlightHome from "../images/catchlight.gif";
 import jungleHome from "../images/jungle.gif";
 import quizAppHome from "../images/quizapp.gif";
@@ -43,29 +44,36 @@ export default function ProjectCarousel() {
   const maxIndex = allProjects.length - 1;
 
   return (
-    <div className="flex justify-center w-full py-[3rem] bg-zbg">
-      <div
-        id="projects"
-        className="bg-opacity-0 flex w-[95%] flex-col justify-center items-center"
-      >
-        <AnimatePresence exitBeforeEnter>
-          {allProjects.map((project, index) => {
-            if (carouselIndex === index)
-              return (
-                <Project
-                  key={index}
-                  showDesc={showDesc}
-                  setShowDesc={setShowDesc}
-                  maxIndex={maxIndex}
-                  carouselIndex={carouselIndex}
-                  setCarouselIndex={setCarouselIndex}
-                  {...project}
-                >
-                  {project.name}
-                </Project>
-              );
-          })}
-        </AnimatePresence>
+    <div className="flex flex-col justify-center w-full py-[3rem] bg-zbg">
+      <h1 className="proj-title">Projects</h1>
+      <div className="proj-main__container flex justify-center w-full py-[3rem] bg-zbg">
+        <ProjectMenu allProjects={allProjects} />
+
+        <div
+          id="projects"
+          className="bg-opacity-0 flex w-[50%] flex-col justify-center items-center"
+        >
+          <AnimatePresence exitBeforeEnter>
+            {allProjects.map((project, index) => {
+              if (carouselIndex === index) {
+                return (
+                  <Project
+                    key={index}
+                    showDesc={showDesc}
+                    setShowDesc={setShowDesc}
+                    maxIndex={maxIndex}
+                    carouselIndex={carouselIndex}
+                    setCarouselIndex={setCarouselIndex}
+                    {...project}
+                  >
+                    {project.name}
+                  </Project>
+                );
+              }
+              return null;
+            })}
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );
