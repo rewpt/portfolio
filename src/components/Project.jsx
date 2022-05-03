@@ -24,30 +24,9 @@ const variants = {
 };
 
 export default function Project(props) {
-  const {
-    photos,
-    stack,
-    description,
-    carouselIndex,
-    setCarouselIndex,
-    maxIndex,
-    showDesc,
-    setShowDesc,
-    webLink,
-    ghLink,
-  } = props;
-  const decrementCarouselIndex = () => {
-    if (carouselIndex !== 0) setCarouselIndex((prev) => prev - 1);
-    else {
-      setCarouselIndex(maxIndex);
-    }
-  };
-  const incrementCarouselIndex = () => {
-    if (carouselIndex < maxIndex) setCarouselIndex((prev) => prev + 1);
-    else {
-      setCarouselIndex(0);
-    }
-  };
+  const { photos, stack, description, showDesc, setShowDesc, webLink, ghLink } =
+    props;
+
   return (
     <div className="flex flex-col items-center">
       <motion.div
@@ -119,16 +98,6 @@ export default function Project(props) {
       )}
 
       <div className="flex relative items-center">
-        <span
-          onClick={decrementCarouselIndex}
-          className="decrement-carousel absolute bg-white rounded-full flex justify-center items-center left-[.5rem] z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 -rotate-90"
-        >
-          <FontAwesomeIcon
-            className="h-[5vw] w-[5vw] max-h-[60px] max-w-[60px]"
-            icon={faAngleUp}
-          />
-        </span>
-
         <div className="flex items-center h-[96vw] w-[95vw] max-h-[900px] max-w-[886px] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
             variants={variants}
@@ -139,16 +108,6 @@ export default function Project(props) {
             alt=""
           />
         </div>
-
-        <span
-          onClick={incrementCarouselIndex}
-          className="increment-carousel absolute bg-white rounded-full flex justify-center items-center right-[.5rem] z-20 hover:scale-[1.2] hover:cursor-pointer text-[#F47D48] text-opacity-50 bg-opacity-70 rotate-90"
-        >
-          <FontAwesomeIcon
-            className="h-[5vw] w-[5vw] max-h-[60px] max-w-[60px]"
-            icon={faAngleUp}
-          />
-        </span>
       </div>
       <motion.h2
         variants={variants}
