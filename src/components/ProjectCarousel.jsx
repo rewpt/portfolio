@@ -51,7 +51,7 @@ export default function ProjectCarousel() {
 
         <div
           id="projects"
-          className="bg-opacity-0 flex w-[50%] flex-col justify-center items-center"
+          className="bg-opacity-0 flex w-[70%] flex-col justify-center items-center"
         >
           <AnimatePresence exitBeforeEnter>
             {allProjects.map((project, index) => {
