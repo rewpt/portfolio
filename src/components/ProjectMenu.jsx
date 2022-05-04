@@ -24,11 +24,11 @@ const variants = {
 const ProjectMenu = (props) => {
   const { allProjects } = props;
   return (
-    <div className="proj-menu__container w-[50%]">
-      <ul className="flex-col">
+    <div className="proj-menu__container flex-col justify-center w-[50%]">
+      <ul className="flex flex-col h-[100%] items-center">
         {allProjects.map((proj) => {
           return (
-            <li className="flex">
+            <li className="flex justify-center border-1 border-black">
               {proj.name}
               <motion.div className="project-link-container flex ">
                 {proj.ghLink && (

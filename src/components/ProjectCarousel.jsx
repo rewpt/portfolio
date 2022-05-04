@@ -47,7 +47,7 @@ export default function ProjectCarousel() {
     <div className="flex flex-col justify-center w-full py-[3rem] bg-zbg">
       <h1 className="proj-title">Projects</h1>
       <div className="proj-main__container flex justify-center w-full py-[3rem] bg-zbg">
-        <ProjectMenu allProjects={allProjects} />
+        <ProjectMenu allProjects={allProjects} carouselIndex={carouselIndex} />
 
         <div
           id="projects"
