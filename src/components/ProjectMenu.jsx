@@ -25,32 +25,52 @@ const ProjectMenu = (props) => {
   const { allProjects } = props;
   return (
     <div className="proj-menu__container w-[50%]">
-      {allProjects.map((proj) => {
-        return (
-          <>
-            <motion.div className="project-link-container flex justify-end space-saver ">
-              {proj.ghLink && (
-                <motion.a
-                  variants={variants}
-                  whileHover="icoHover"
-                  className="webLink "
-                  href={proj.ghLink}
-                  aria-label="webLink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
-                    icon={faGithub}
-                  />
-                </motion.a>
-              )}
-            </motion.div>
-            <li>{proj.name}</li>
-          </>
-        );
-      })}
-      <ul></ul>
+      <ul className="flex-col">
+        {allProjects.map((proj) => {
+          return (
+            <li className="flex">
+              {proj.name}
+              <motion.div className="project-link-container flex ">
+                {proj.ghLink && (
+                  <motion.a
+                    variants={variants}
+                    whileHover="icoHover"
+                    className="webLink "
+                    href={proj.ghLink}
+                    aria-label="webLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
+                      icon={faGithub}
+                    />
+                  </motion.a>
+                )}
+              </motion.div>
+
+              <motion.div className="project-link-container flex">
+                {proj.webLink && (
+                  <motion.a
+                    variants={variants}
+                    whileHover="icoHover"
+                    className="webLink "
+                    href={proj.ghLink}
+                    aria-label="webLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className=" h-[3rem] w-[3rem] hover:cursor-pointer hover:text-zorange "
+                      icon={faChrome}
+                    />
+                  </motion.a>
+                )}
+              </motion.div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
