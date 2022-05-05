@@ -47,8 +47,8 @@ export default function ProjectCarousel() {
   const maxIndex = allProjects.length - 1;
 
   return (
-    <div className="flex flex-col justify-center w-full py-[3rem] bg-zbg">
-      <div className="proj-main__container flex justify-center w-full pb-[3rem] bg-zbg">
+    <div className="flex flex-col w-full py-[3rem] bg-zbg">
+      <div className="proj-main__container flex w-full pb-[3rem] bg-zbg">
         <ProjectMenu
           allProjects={allProjects}
           carouselIndex={carouselIndex}
