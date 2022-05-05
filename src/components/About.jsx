@@ -6,7 +6,7 @@ import Bolt from "../images/about/boltai.png";
 export default function () {
   return (
     <div className="about-container">
-      {/* <h2 className="believe-title">I believe in</h2> */}
+      <h2 className="believe-title">Philosophy</h2>
       <ul className="keyword-container">
         <div className="keyword-item">
           <div className="h-[20vw] w-[15.4vw] max-w-[90px] max-h-[70px] mb-[3rem]">
