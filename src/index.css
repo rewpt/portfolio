@@ -82,11 +82,11 @@ html {
     @apply flex flex-col items-center;
   }
   .keyword-item {
-    @apply flex flex-col hover:scale-[1.02] p-[2rem] w-3/4 max-h-[400px] max-w-[530px] items-center justify-center bg-zgrey;
+    @apply flex flex-col hover:scale-[1.02] p-[2rem] w-3/4 max-h-[400px] max-w-[530px] items-center justify-center bg-zbg;
   }
 
   .keyword-item {
-    box-shadow: 0 0 30px -2px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 20px -2px rgb(0 0 0 / 10%);
   }
 
   .keyword-item + .keyword-item {
@@ -117,7 +117,7 @@ html {
   }
 
   .stack-images {
-    @apply flex flex-col;
+    @apply flex;
     gap: 1.5rem;
   }
   .stack-img {
@@ -147,11 +147,6 @@ html {
       margin-left: 1.5rem;
       margin-top: 0;
     }
-
-    .stack-images {
-      @apply flex flex-col;
-      gap: 1.5rem;
-    }
     .stack-img {
       @apply mx-[1.5rem];
     }
@@ -167,7 +162,7 @@ html {
     }
 
     .keyword-item {
-      @apply p-[2rem] h-[344px] w-[416px] items-center mt-0 justify-center bg-zgrey;
+      @apply p-[2rem] h-[30vw] w-[30vw] items-center mt-0 justify-center bg-zbg;
     }
 
     .about-container {
