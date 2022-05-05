@@ -41,13 +41,13 @@ export default function Contact() {
     }
   };
   return (
-    <div className="flex justify-center w-full bg-gradient-to-r from-zlpurple to-zvlpurple py-[3rem]">
+    <div className="flex justify-center w-full bg-gradient-to-r from-zblue to-zhonolulublue py-[3rem]">
       <div className="w-[90%] max-w-[800px] flex justify-center items-center">
         <div
           id="contact"
           className="flex flex-col justify-center w-full bg-opacity-0 "
         >
-          <h1 className="contact-h1">Contact</h1>
+          <h1 className="contact-h1">Start your project</h1>
           <form
             onSubmit={(e) => {
               e.preventDefault();
