@@ -11,29 +11,27 @@ const logos = [PsqlLogo, ReactLogo, JsLogo, JestLogo, RubyLogo, TailwindLogo];
 export default function techStack() {
   return (
     <section className="stack-container">
-      <h2 className="stack-title">Tech Stack</h2>
-      <div className="stack-images">
-        <div className="react-container flex justify-center">
-          <div className="stack-img h-[25vw] w-[25vw] max-h-[160px] max-w-[160px]">
+      <div className="flex flex-col bg-zbg drop-shadow-lg p-10">
+        <h2 className="stack-title self-center">Tech Stack</h2>
+        <div className="stack-images">
+          <div className="stack-img h-[10vw] w-[10vw] max-h-[160px] max-w-[160px]">
             <img className="h-full w-full" src={ReactLogo} alt="logo" />
           </div>
-        </div>
-        <div className="javascript-tailwind-container flex justify-center">
-          <div className="stack-img h-[25vw] w-[25vw] mx-[1.5rem] max-h-[160px] max-w-[160px]">
+
+          <div className="stack-img h-[10vw] w-[10vw] mx-[1.5rem] max-h-[160px] max-w-[160px]">
             <img className="h-full w-full" src={TailwindLogo} alt="logo" />
           </div>
-          <div className="stack-img h-[25vw] w-[25vw] mx-[1.5rem] max-h-[160px] max-w-[160px]">
+          <div className="stack-img h-[10vw] w-[10vw] mx-[1.5rem] max-h-[160px] max-w-[160px]">
             <img className="h-full w-full" src={JsLogo} alt="logo" />
           </div>
-        </div>
-        <div className="ruby-psql-jest-container flex justify-center">
-          <div className="stack-img h-[25vw] w-[25vw] max-h-[160px] max-w-[160px]">
+
+          <div className="stack-img h-[10vw] w-[10vw] max-h-[160px] max-w-[160px]">
             <img className="h-full w-full" src={RubyLogo} alt="logo" />
           </div>
-          <div className="stack-img h-[30vw] mx-[3rem] w-[30vw] max-h-[160px] max-w-[160px]">
+          <div className="stack-img h-[11vw] w-[11vw] mx-[3rem]  max-h-[160px] max-w-[160px]">
             <img className="h-full w-full" src={PsqlLogo} alt="logo" />
           </div>
-          <div className="stack-img h-[25vw] w-[25vw] max-h-[160px] max-w-[160px]">
+          <div className="stack-img h-[10vw] w-[10vw] max-h-[160px] max-w-[160px]">
             <img className="h-full w-full" src={JestLogo} alt="logo" />
           </div>
         </div>
