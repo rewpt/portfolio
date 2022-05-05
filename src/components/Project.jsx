@@ -26,7 +26,7 @@ const variants = {
 export default function Project(props) {
   const { photos, id } = props;
   return (
-    <div className={`flex flex-col items-center py-[3rem]`}>
+    <div className={`flex flex-col items-center`}>
       <div className="flex relative items-center">
         <div className="flex items-center h-[48vw] w-[47vw]  max-h-[900px] max-w-[886px] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
