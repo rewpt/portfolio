@@ -37,7 +37,7 @@ export const MenuItem = (props) => {
   };
 
   return (
-    <li className="flex flex-col w-[80%] border-t-2 mb-[1em] mt-[1em] p-[1rem] border-y-black">
+    <li className="flex flex-col w-[80%] border-t-2 mt-[1em] p-[1rem] border-y-black">
       <div className="menu-item-top w-full flex justify-between">
         <h2
           onClick={() => changeCarouselIndex(id)}
