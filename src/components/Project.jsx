@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -24,13 +24,11 @@ const variants = {
 };
 
 export default function Project(props) {
-  const { photos, stack, description, showDesc, setShowDesc, webLink, ghLink } =
-    props;
-
+  const { photos, id } = props;
   return (
-    <div className="flex flex-col items-center">
+    <div className={`flex flex-col items-center py-[3rem]`}>
       <div className="flex relative items-center">
-        <div className="flex items-center h-[96vw] w-[95vw] max-h-[900px] max-w-[886px] mt-[1.5rem] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
+        <div className="flex items-center h-[48vw] w-[47vw]  max-h-[900px] max-w-[886px] drop-shadow-lg border-2 border-black justify-center bg-black overflow-hidden">
           <motion.img
             variants={variants}
             initial="initial"
@@ -41,34 +39,6 @@ export default function Project(props) {
           />
         </div>
       </div>
-      <motion.h2
-        variants={variants}
-        initial="titleInitial"
-        animate="titleAnimate"
-        exit="titleExit"
-        className="mt-[20px] mx-[.5em] text-[1.3rem] flex"
-      >
-        <span className="flex-1">Crafted with:</span>
-        <ul className="flex flex-wrap ">
-          {stack.map((el, index) => {
-            if (index !== stack.length - 1) {
-              return (
-                <li key={index} className="ml-[8px]">
-                  {" "}
-                  {el},{" "}
-                </li>
-              );
-            } else {
-              return (
-                <li key={index} className="ml-[8px]">
-                  {" "}
-                  {el}{" "}
-                </li>
-              );
-            }
-          })}
-        </ul>
-      </motion.h2>
     </div>
   );
 }
