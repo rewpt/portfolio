@@ -6,7 +6,7 @@ const ProjectMenu = (props) => {
   const { allProjects, carouselIndex, setCarouselIndex } = props;
 
   return (
-    <div className="proj-menu__container flex-col justify-center w-[50%]">
+    <div className="proj-menu__container flex-col justify-center">
       <h1 className="proj-title">Projects</h1>
       <ul className="flex flex-col h-[100%] items-center">
         {allProjects.map((project, index) => {
