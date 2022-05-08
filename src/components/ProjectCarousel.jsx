@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useIsLarge } from "../hooks/useMediaQuery";
 import Project from "./Project";
 import ProjectMenu from "./ProjectMenu";
 import catchlightHome from "../images/catchlight.gif";
@@ -43,8 +44,18 @@ const allProjects = [
 
 export default function ProjectCarousel() {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [showGif, setShowGif] = useState(false);
   const [showDesc, setShowDesc] = useState(true);
   const maxIndex = allProjects.length - 1;
+  const isLarge = useIsLarge();
+
+  useEffect(() => {
+    if (isLarge) {
+      setShowGif(true);
+    } else {
+      setShowGif(false);
+    }
+  });
 
   return (
     <div className="flex flex-col w-full py-[3rem] bg-zbg">
@@ -54,29 +65,30 @@ export default function ProjectCarousel() {
           carouselIndex={carouselIndex}
           setCarouselIndex={setCarouselIndex}
         />
-
-        <div id="projects" className="bg-opacity-0 flex w-[70%] flex-col">
-          <AnimatePresence exitBeforeEnter>
-            {allProjects.map((project) => {
-              if (carouselIndex === project.id) {
-                return (
-                  <Project
-                    key={project.id}
-                    showDesc={showDesc}
-                    setShowDesc={setShowDesc}
-                    maxIndex={maxIndex}
-                    carouselIndex={carouselIndex}
-                    setCarouselIndex={setCarouselIndex}
-                    {...project}
-                  >
-                    {project.name}
-                  </Project>
-                );
-              }
-              return null;
-            })}
-          </AnimatePresence>
-        </div>
+        {showGif && (
+          <div id="projects" className="bg-opacity-0 flex w-[70%] flex-col">
+            <AnimatePresence exitBeforeEnter>
+              {allProjects.map((project) => {
+                if (carouselIndex === project.id) {
+                  return (
+                    <Project
+                      key={project.id}
+                      showDesc={showDesc}
+                      setShowDesc={setShowDesc}
+                      maxIndex={maxIndex}
+                      carouselIndex={carouselIndex}
+                      setCarouselIndex={setCarouselIndex}
+                      {...project}
+                    >
+                      {project.name}
+                    </Project>
+                  );
+                }
+                return null;
+              })}
+            </AnimatePresence>
+          </div>
+        )}
       </div>
     </div>
   );
