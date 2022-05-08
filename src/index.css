@@ -113,7 +113,7 @@ html {
   }
 
   .stack-container {
-    @apply py-[3.5em] flex flex-col items-center bg-zbg;
+    @apply py-[3.5em] w-1/2 h-1/2 flex flex-col items-center bg-zbg;
   }
 
   .stack-images {
